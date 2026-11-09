@@ -1,0 +1,586 @@
+{
+ "validated_at": "2026-11-09T19:04:32.087719+00:00",
+ "engine": "impala",
+ "catalog": "/tmp/hms_catalog_source.json",
+ "tables": {
+  "atlas_test.facturas": {
+   "type": "MANAGED_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test.db/facturas",
+   "row_count": 100,
+   "hdfs_files": 1,
+   "hdfs_bytes": 3025
+  },
+  "atlas_test_db.atlas_test_metadata": {
+   "type": "MANAGED_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/atlas_test_metadata",
+   "row_count": 3,
+   "hdfs_files": 1,
+   "hdfs_bytes": 1320
+  },
+  "atlas_test_db.live_test_users": {
+   "type": "MANAGED_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/live_test_users",
+   "row_count": 1,
+   "hdfs_files": 1,
+   "hdfs_bytes": 639
+  },
+  "atlas_test_db.processed_active_users": {
+   "type": "MANAGED_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/processed_active_users",
+   "row_count": 2,
+   "hdfs_files": 1,
+   "hdfs_bytes": 1014
+  },
+  "atlas_test_db.raw_users": {
+   "type": "MANAGED_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/raw_users",
+   "row_count": 3,
+   "hdfs_files": 1,
+   "hdfs_bytes": 1049
+  },
+  "crm_bronze.activities_raw": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/activities",
+   "row_count": 1600,
+   "hdfs_files": 1,
+   "hdfs_bytes": 105803
+  },
+  "crm_bronze.contacts_raw": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/contacts",
+   "row_count": 340,
+   "hdfs_files": 1,
+   "hdfs_bytes": 30870
+  },
+  "crm_bronze.customers_raw": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/customers",
+   "row_count": 218,
+   "hdfs_files": 1,
+   "hdfs_bytes": 27071
+  },
+  "crm_bronze.opportunities_raw": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/opportunities",
+   "row_count": 650,
+   "hdfs_files": 1,
+   "hdfs_bytes": 60422
+  },
+  "crm_bronze.products_raw": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/products",
+   "row_count": 34,
+   "hdfs_files": 1,
+   "hdfs_bytes": 1895
+  },
+  "crm_gold.customer_360": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/gold/customer_360",
+   "row_count": 200,
+   "hdfs_files": 1,
+   "hdfs_bytes": 12137
+  },
+  "crm_gold.monthly_revenue_summary": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/gold/monthly_revenue_summary",
+   "row_count": 84,
+   "hdfs_files": 1,
+   "hdfs_bytes": 3494
+  },
+  "crm_gold.pipeline_by_stage": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/gold/pipeline_by_stage",
+   "row_count": 48,
+   "hdfs_files": 1,
+   "hdfs_bytes": 3070
+  },
+  "crm_silver.dim_contacts": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/silver/dim_contacts",
+   "row_count": 320,
+   "hdfs_files": 1,
+   "hdfs_bytes": 12813
+  },
+  "crm_silver.dim_customers": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/silver/dim_customers",
+   "row_count": 200,
+   "hdfs_files": 1,
+   "hdfs_bytes": 11732
+  },
+  "crm_silver.dim_products": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/silver/dim_products",
+   "row_count": 32,
+   "hdfs_files": 1,
+   "hdfs_bytes": 2246
+  },
+  "crm_silver.fact_activities": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/silver/fact_activities",
+   "row_count": 1461,
+   "hdfs_files": 1,
+   "hdfs_bytes": 27114
+  },
+  "crm_silver.fact_opportunities": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/data/crm/silver/fact_opportunities",
+   "row_count": 602,
+   "hdfs_files": 1,
+   "hdfs_bytes": 22004
+  },
+  "default.tabla_hive_tradicional": {
+   "type": "MANAGED_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/tabla_hive_tradicional",
+   "row_count": 1,
+   "hdfs_files": 1,
+   "hdfs_bytes": 898
+  },
+  "information_schema.column_privileges": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.columns": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.compactions": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.scheduled_executions": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.scheduled_queries": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.schemata": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.table_privileges": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.tables": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "information_schema.views": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "sys.bucketing_cols": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/BUCKETING_COLS",
+   "row_count": null,
+   "error": "fc894e15a5a6d4)\nQuery: select count(*) from sys.bucketing_cols\nQuery submitted at: 2026-11-10 03:04:57 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.bucketing_cols'\n\nCould not execute command: select count(*) from sys.bucketing_cols",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.cdh_version": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "sys.cds": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/CDS",
+   "row_count": null,
+   "error": "(build 27b919fc8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.cds\nQuery submitted at: 2026-11-10 03:04:59 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.cds'\n\nCould not execute command: select count(*) from sys.cds",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.columns_v2": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/COLUMNS_V2",
+   "row_count": null,
+   "error": "648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.columns_v2\nQuery submitted at: 2026-11-10 03:05:00 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.columns_v2'\n\nCould not execute command: select count(*) from sys.columns_v2",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.compaction_queue": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/COMPACTION_QUEUE",
+   "row_count": null,
+   "error": "15a5a6d4)\nQuery: select count(*) from sys.compaction_queue\nQuery submitted at: 2026-11-10 03:05:01 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.compaction_queue'\n\nCould not execute command: select count(*) from sys.compaction_queue",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.compactions": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "sys.completed_compactions": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/COMPLETED_COMPACTIONS",
+   "row_count": null,
+   "error": ": select count(*) from sys.completed_compactions\nQuery submitted at: 2026-11-10 03:05:02 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.completed_compactions'\n\nCould not execute command: select count(*) from sys.completed_compactions",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.database_params": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DATABASE_PARAMS",
+   "row_count": null,
+   "error": "94e15a5a6d4)\nQuery: select count(*) from sys.database_params\nQuery submitted at: 2026-11-10 03:05:03 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.database_params'\n\nCould not execute command: select count(*) from sys.database_params",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.db_privs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DB_PRIVS",
+   "row_count": null,
+   "error": "8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.db_privs\nQuery submitted at: 2026-11-10 03:05:05 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.db_privs'\n\nCould not execute command: select count(*) from sys.db_privs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.dbs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DBS",
+   "row_count": null,
+   "error": "(build 27b919fc8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.dbs\nQuery submitted at: 2026-11-10 03:05:06 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.dbs'\n\nCould not execute command: select count(*) from sys.dbs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.db_version": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DB_VERSION",
+   "row_count": null,
+   "error": "648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.db_version\nQuery submitted at: 2026-11-10 03:05:07 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.db_version'\n\nCould not execute command: select count(*) from sys.db_version",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.funcs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/FUNCS",
+   "row_count": null,
+   "error": " 27b919fc8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.funcs\nQuery submitted at: 2026-11-10 03:05:08 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.funcs'\n\nCould not execute command: select count(*) from sys.funcs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.global_privs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/GLOBAL_PRIVS",
+   "row_count": null,
+   "error": "aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.global_privs\nQuery submitted at: 2026-11-10 03:05:09 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.global_privs'\n\nCould not execute command: select count(*) from sys.global_privs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.key_constraints": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/KEY_CONSTRAINTS",
+   "row_count": null,
+   "error": "94e15a5a6d4)\nQuery: select count(*) from sys.key_constraints\nQuery submitted at: 2026-11-10 03:05:11 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.key_constraints'\n\nCould not execute command: select count(*) from sys.key_constraints",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.mv_creation_metadata": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/MV_CREATION_METADATA",
+   "row_count": null,
+   "error": "ery: select count(*) from sys.mv_creation_metadata\nQuery submitted at: 2026-11-10 03:05:12 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.mv_creation_metadata'\n\nCould not execute command: select count(*) from sys.mv_creation_metadata",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.mv_tables_used": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/MV_TABLES_USED",
+   "row_count": null,
+   "error": "fc894e15a5a6d4)\nQuery: select count(*) from sys.mv_tables_used\nQuery submitted at: 2026-11-10 03:05:13 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.mv_tables_used'\n\nCould not execute command: select count(*) from sys.mv_tables_used",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.part_col_privs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PART_COL_PRIVS",
+   "row_count": null,
+   "error": "fc894e15a5a6d4)\nQuery: select count(*) from sys.part_col_privs\nQuery submitted at: 2026-11-10 03:05:14 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.part_col_privs'\n\nCould not execute command: select count(*) from sys.part_col_privs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.part_col_stats": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PART_COL_STATS",
+   "row_count": null,
+   "error": "fc894e15a5a6d4)\nQuery: select count(*) from sys.part_col_stats\nQuery submitted at: 2026-11-10 03:05:15 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.part_col_stats'\n\nCould not execute command: select count(*) from sys.part_col_stats",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.partition_keys": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITION_KEYS",
+   "row_count": null,
+   "error": "fc894e15a5a6d4)\nQuery: select count(*) from sys.partition_keys\nQuery submitted at: 2026-11-10 03:05:17 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.partition_keys'\n\nCould not execute command: select count(*) from sys.partition_keys",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.partition_key_vals": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITION_KEY_VALS",
+   "row_count": null,
+   "error": "d4)\nQuery: select count(*) from sys.partition_key_vals\nQuery submitted at: 2026-11-10 03:05:18 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.partition_key_vals'\n\nCould not execute command: select count(*) from sys.partition_key_vals",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.partition_params": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITION_PARAMS",
+   "row_count": null,
+   "error": "15a5a6d4)\nQuery: select count(*) from sys.partition_params\nQuery submitted at: 2026-11-10 03:05:19 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.partition_params'\n\nCould not execute command: select count(*) from sys.partition_params",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.partitions": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITIONS",
+   "row_count": null,
+   "error": "r: http://cloudera-node.local:25000)\nERROR: ParseException: Syntax error in line 1:\nselect count(*) from sys.partitions\n                         ^\nEncountered: PARTITIONS\nExpected: DEFAULT, IDENTIFIER\n\nCAUSED BY: Exception: Syntax error\n\nCould not execute command: select count(*) from sys.partitions",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.partition_stats_view": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "sys.part_privs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PART_PRIVS",
+   "row_count": null,
+   "error": "648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.part_privs\nQuery submitted at: 2026-11-10 03:05:21 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.part_privs'\n\nCould not execute command: select count(*) from sys.part_privs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.replication_metrics": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/REPLICATION_METRICS",
+   "row_count": null,
+   "error": "\nQuery: select count(*) from sys.replication_metrics\nQuery submitted at: 2026-11-10 03:05:23 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.replication_metrics'\n\nCould not execute command: select count(*) from sys.replication_metrics",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.role_map": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/ROLE_MAP",
+   "row_count": null,
+   "error": "8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.role_map\nQuery submitted at: 2026-11-10 03:05:24 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.role_map'\n\nCould not execute command: select count(*) from sys.role_map",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.roles": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/ROLES",
+   "row_count": null,
+   "error": ":25 (Coordinator: http://cloudera-node.local:25000)\nERROR: ParseException: Syntax error in line 1:\nselect count(*) from sys.roles\n                         ^\nEncountered: ROLES\nExpected: DEFAULT, IDENTIFIER\n\nCAUSED BY: Exception: Syntax error\n\nCould not execute command: select count(*) from sys.roles",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.scheduled_executions": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SCHEDULED_EXECUTIONS",
+   "row_count": null,
+   "error": "ery: select count(*) from sys.scheduled_executions\nQuery submitted at: 2026-11-10 03:05:26 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.scheduled_executions'\n\nCould not execute command: select count(*) from sys.scheduled_executions",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.scheduled_queries": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SCHEDULED_QUERIES",
+   "row_count": null,
+   "error": "5a6d4)\nQuery: select count(*) from sys.scheduled_queries\nQuery submitted at: 2026-11-10 03:05:27 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.scheduled_queries'\n\nCould not execute command: select count(*) from sys.scheduled_queries",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.sd_params": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SD_PARAMS",
+   "row_count": null,
+   "error": "907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.sd_params\nQuery submitted at: 2026-11-10 03:05:29 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.sd_params'\n\nCould not execute command: select count(*) from sys.sd_params",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.sds": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SDS",
+   "row_count": null,
+   "error": "(build 27b919fc8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.sds\nQuery submitted at: 2026-11-10 03:05:30 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.sds'\n\nCould not execute command: select count(*) from sys.sds",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.sequence_table": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SEQUENCE_TABLE",
+   "row_count": null,
+   "error": "fc894e15a5a6d4)\nQuery: select count(*) from sys.sequence_table\nQuery submitted at: 2026-11-10 03:05:31 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.sequence_table'\n\nCould not execute command: select count(*) from sys.sequence_table",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.serde_params": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SERDE_PARAMS",
+   "row_count": null,
+   "error": "aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.serde_params\nQuery submitted at: 2026-11-10 03:05:32 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.serde_params'\n\nCould not execute command: select count(*) from sys.serde_params",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.serdes": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SERDES",
+   "row_count": null,
+   "error": "b919fc8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.serdes\nQuery submitted at: 2026-11-10 03:05:34 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.serdes'\n\nCould not execute command: select count(*) from sys.serdes",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.skewed_col_names": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_COL_NAMES",
+   "row_count": null,
+   "error": "15a5a6d4)\nQuery: select count(*) from sys.skewed_col_names\nQuery submitted at: 2026-11-10 03:05:35 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.skewed_col_names'\n\nCould not execute command: select count(*) from sys.skewed_col_names",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.skewed_col_value_loc_map": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_COL_VALUE_LOC_MAP",
+   "row_count": null,
+   "error": "count(*) from sys.skewed_col_value_loc_map\nQuery submitted at: 2026-11-10 03:05:36 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.skewed_col_value_loc_map'\n\nCould not execute command: select count(*) from sys.skewed_col_value_loc_map",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.skewed_string_list": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_STRING_LIST",
+   "row_count": null,
+   "error": "d4)\nQuery: select count(*) from sys.skewed_string_list\nQuery submitted at: 2026-11-10 03:05:37 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.skewed_string_list'\n\nCould not execute command: select count(*) from sys.skewed_string_list",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.skewed_string_list_values": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_STRING_LIST_VALUES",
+   "row_count": null,
+   "error": "nt(*) from sys.skewed_string_list_values\nQuery submitted at: 2026-11-10 03:05:38 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.skewed_string_list_values'\n\nCould not execute command: select count(*) from sys.skewed_string_list_values",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.skewed_values": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_VALUES",
+   "row_count": null,
+   "error": "8eefc894e15a5a6d4)\nQuery: select count(*) from sys.skewed_values\nQuery submitted at: 2026-11-10 03:05:40 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.skewed_values'\n\nCould not execute command: select count(*) from sys.skewed_values",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.sort_cols": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SORT_COLS",
+   "row_count": null,
+   "error": "907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.sort_cols\nQuery submitted at: 2026-11-10 03:05:41 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.sort_cols'\n\nCould not execute command: select count(*) from sys.sort_cols",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.tab_col_stats": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TAB_COL_STATS",
+   "row_count": null,
+   "error": "8eefc894e15a5a6d4)\nQuery: select count(*) from sys.tab_col_stats\nQuery submitted at: 2026-11-10 03:05:42 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.tab_col_stats'\n\nCould not execute command: select count(*) from sys.tab_col_stats",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.table_params": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TABLE_PARAMS",
+   "row_count": null,
+   "error": "aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.table_params\nQuery submitted at: 2026-11-10 03:05:43 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.table_params'\n\nCould not execute command: select count(*) from sys.table_params",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.table_stats_view": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "sys.tbl_col_privs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TBL_COL_PRIVS",
+   "row_count": null,
+   "error": "8eefc894e15a5a6d4)\nQuery: select count(*) from sys.tbl_col_privs\nQuery submitted at: 2026-11-10 03:05:44 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.tbl_col_privs'\n\nCould not execute command: select count(*) from sys.tbl_col_privs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.tbl_privs": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TBL_PRIVS",
+   "row_count": null,
+   "error": "907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.tbl_privs\nQuery submitted at: 2026-11-10 03:05:46 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.tbl_privs'\n\nCould not execute command: select count(*) from sys.tbl_privs",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.tbls": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TBLS",
+   "row_count": null,
+   "error": "ild 27b919fc8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.tbls\nQuery submitted at: 2026-11-10 03:05:47 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.tbls'\n\nCould not execute command: select count(*) from sys.tbls",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.version": {
+   "type": "VIRTUAL_VIEW",
+   "location": "",
+   "skipped": "view"
+  },
+  "sys.wm_mappings": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_MAPPINGS",
+   "row_count": null,
+   "error": "349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.wm_mappings\nQuery submitted at: 2026-11-10 03:05:48 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.wm_mappings'\n\nCould not execute command: select count(*) from sys.wm_mappings",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.wm_pools": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_POOLS",
+   "row_count": null,
+   "error": "8a5907648349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.wm_pools\nQuery submitted at: 2026-11-10 03:05:49 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.wm_pools'\n\nCould not execute command: select count(*) from sys.wm_pools",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.wm_pools_to_triggers": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_POOLS_TO_TRIGGERS",
+   "row_count": null,
+   "error": "ery: select count(*) from sys.wm_pools_to_triggers\nQuery submitted at: 2026-11-10 03:05:50 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.wm_pools_to_triggers'\n\nCould not execute command: select count(*) from sys.wm_pools_to_triggers",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.wm_resourceplans": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_RESOURCEPLANS",
+   "row_count": null,
+   "error": "15a5a6d4)\nQuery: select count(*) from sys.wm_resourceplans\nQuery submitted at: 2026-11-10 03:05:52 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.wm_resourceplans'\n\nCould not execute command: select count(*) from sys.wm_resourceplans",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  },
+  "sys.wm_triggers": {
+   "type": "EXTERNAL_TABLE",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_TRIGGERS",
+   "row_count": null,
+   "error": "349aa48eefc894e15a5a6d4)\nQuery: select count(*) from sys.wm_triggers\nQuery submitted at: 2026-11-10 03:05:53 (Coordinator: http://cloudera-node.local:25000)\nERROR: AnalysisException: Could not resolve table reference: 'sys.wm_triggers'\n\nCould not execute command: select count(*) from sys.wm_triggers",
+   "hdfs_files": 0,
+   "hdfs_bytes": 0
+  }
+ }
+}

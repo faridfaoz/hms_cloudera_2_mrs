@@ -1,0 +1,1255 @@
+{
+ "homologated_at": "2026-11-09T20:12:04.295483+00:00",
+ "source_catalog": "out/hms_catalog_source.json",
+ "authority_map": "cloudera-node.local:8020 -> hacluster",
+ "path_maps": [
+  "/warehouse/tablespace/managed/hive -> /user/hive/warehouse",
+  "/warehouse/tablespace/external/hive -> /user/hive/warehouse"
+ ],
+ "managed_as_external": true,
+ "databases": [
+  {
+   "name": "atlas_test",
+   "description": "",
+   "owner": "admin",
+   "owner_type": "USER",
+   "params": {},
+   "location": "hdfs://hacluster/user/hive/warehouse/atlas_test.db",
+   "tables": [
+    {
+     "name": "facturas",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE",
+      "transient_lastDdlTime": "1792706500"
+     },
+     "columns": [
+      {
+       "name": "id_factura",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "monto",
+       "type": "decimal(10,2)",
+       "comment": null
+      },
+      {
+       "name": "fecha",
+       "type": "timestamp",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/user/hive/warehouse/atlas_test.db/facturas",
+     "partitions": []
+    }
+   ]
+  },
+  {
+   "name": "atlas_test_db",
+   "description": "",
+   "owner": "admin",
+   "owner_type": "USER",
+   "params": {},
+   "location": "hdfs://hacluster/user/hive/warehouse/atlas_test_db.db",
+   "tables": [
+    {
+     "name": "atlas_test_metadata",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "transient_lastDdlTime": "1793052141",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "columns": [
+      {
+       "name": "id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "created_date",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "status",
+       "type": "string",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/user/hive/warehouse/atlas_test_db.db/atlas_test_metadata",
+     "partitions": []
+    },
+    {
+     "name": "live_test_users",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE",
+      "transient_lastDdlTime": "1792709992"
+     },
+     "columns": [
+      {
+       "name": "id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "username",
+       "type": "string",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/user/hive/warehouse/atlas_test_db.db/live_test_users",
+     "partitions": []
+    },
+    {
+     "name": "processed_active_users",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "transient_lastDdlTime": "1792708537",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "columns": [
+      {
+       "name": "user_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "user_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "string",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/user/hive/warehouse/atlas_test_db.db/processed_active_users",
+     "partitions": []
+    },
+    {
+     "name": "raw_users",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "params": {
+      "impala.lastComputeStatsTime": "1792713811",
+      "numRows": "3",
+      "impala.events.catalogServiceId": "6fe03d5c5f594526:ab00623367d08ad6",
+      "impala.events.catalogVersion": "37",
+      "totalSize": "1049",
+      "STATS_GENERATED": "TASK",
+      "transactional_properties": "insert_only",
+      "transient_lastDdlTime": "1792708514",
+      "transactional": "true",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "columns": [
+      {
+       "name": "user_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "user_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "string",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/user/hive/warehouse/atlas_test_db.db/raw_users",
+     "partitions": []
+    }
+   ]
+  },
+  {
+   "name": "crm_bronze",
+   "description": "Bronze layer: raw CRM data as ingested from source systems",
+   "owner": "impala",
+   "owner_type": "USER",
+   "params": {},
+   "location": "hdfs://hacluster/user/hive/warehouse/crm_bronze.db",
+   "tables": [
+    {
+     "name": "activities_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "transient_lastDdlTime": "1792793250",
+      "numFiles": "1",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "totalSize": "105803",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "comment": "Bronze: raw CRM sales activities (calls, emails, meetings, demos)"
+     },
+     "columns": [
+      {
+       "name": "activity_id",
+       "type": "string",
+       "comment": "Activity id (raw)"
+      },
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Customer FK (may be orphan)"
+      },
+      {
+       "name": "contact_id",
+       "type": "string",
+       "comment": "Contact FK (may be empty)"
+      },
+      {
+       "name": "opportunity_id",
+       "type": "string",
+       "comment": "Opportunity FK (may be empty or orphan)"
+      },
+      {
+       "name": "activity_type",
+       "type": "string",
+       "comment": "Type: call/email/meeting/demo (variants)"
+      },
+      {
+       "name": "activity_date",
+       "type": "string",
+       "comment": "Activity date (unparsed string)"
+      },
+      {
+       "name": "duration_minutes",
+       "type": "string",
+       "comment": "Duration (may be empty or negative)"
+      },
+      {
+       "name": "outcome",
+       "type": "string",
+       "comment": "Free-text outcome"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/bronze/activities",
+     "partitions": []
+    },
+    {
+     "name": "contacts_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "totalSize": "30870",
+      "numFiles": "1",
+      "comment": "Bronze: raw CRM contacts as extracted from the source system",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793249"
+     },
+     "columns": [
+      {
+       "name": "contact_id",
+       "type": "string",
+       "comment": "Source contact id (raw)"
+      },
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Customer FK (may be orphan)"
+      },
+      {
+       "name": "first_name",
+       "type": "string",
+       "comment": "First name"
+      },
+      {
+       "name": "last_name",
+       "type": "string",
+       "comment": "Last name"
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": "Email (mixed case)"
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": "Phone (may be empty)"
+      },
+      {
+       "name": "role",
+       "type": "string",
+       "comment": "Role (mixed case)"
+      },
+      {
+       "name": "is_primary",
+       "type": "string",
+       "comment": "Primary contact flag (inconsistent)"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/bronze/contacts",
+     "partitions": []
+    },
+    {
+     "name": "customers_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "numFiles": "1",
+      "comment": "Bronze: raw CRM customers as extracted from the source system",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "totalSize": "27071",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793249"
+     },
+     "columns": [
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Source customer id (raw, may be empty)"
+      },
+      {
+       "name": "customer_name",
+       "type": "string",
+       "comment": "Company name (mixed case)"
+      },
+      {
+       "name": "industry",
+       "type": "string",
+       "comment": "Industry (raw)"
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": "Segment (inconsistent variants)"
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": "Region (inconsistent variants)"
+      },
+      {
+       "name": "country",
+       "type": "string",
+       "comment": "Country"
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": "Contact email (mixed case)"
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": "Phone (messy formats)"
+      },
+      {
+       "name": "signup_date",
+       "type": "string",
+       "comment": "Signup date (unparsed string)"
+      },
+      {
+       "name": "is_active",
+       "type": "string",
+       "comment": "Active flag (inconsistent variants)"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/bronze/customers",
+     "partitions": []
+    },
+    {
+     "name": "opportunities_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "transient_lastDdlTime": "1792793250",
+      "totalSize": "60422",
+      "numFiles": "1",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "comment": "Bronze: raw CRM opportunities (sales pipeline)"
+     },
+     "columns": [
+      {
+       "name": "opportunity_id",
+       "type": "string",
+       "comment": "Opportunity id (raw)"
+      },
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Customer FK (may be orphan)"
+      },
+      {
+       "name": "product_id",
+       "type": "string",
+       "comment": "Product FK"
+      },
+      {
+       "name": "contact_id",
+       "type": "string",
+       "comment": "Contact FK (may be empty)"
+      },
+      {
+       "name": "stage",
+       "type": "string",
+       "comment": "Sales stage (many inconsistent variants)"
+      },
+      {
+       "name": "amount",
+       "type": "string",
+       "comment": "Deal amount (may be empty or negative)"
+      },
+      {
+       "name": "created_date",
+       "type": "string",
+       "comment": "Created date (unparsed string)"
+      },
+      {
+       "name": "close_date",
+       "type": "string",
+       "comment": "Close date (may be invalid)"
+      },
+      {
+       "name": "owner_name",
+       "type": "string",
+       "comment": "Sales rep owning the deal"
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": "Region as captured by the rep"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/bronze/opportunities",
+     "partitions": []
+    },
+    {
+     "name": "products_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "comment": "Bronze: raw CRM product catalog",
+      "numFiles": "1",
+      "totalSize": "1895",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793249"
+     },
+     "columns": [
+      {
+       "name": "product_id",
+       "type": "string",
+       "comment": "Product id (raw)"
+      },
+      {
+       "name": "product_name",
+       "type": "string",
+       "comment": "Product name"
+      },
+      {
+       "name": "category",
+       "type": "string",
+       "comment": "Category (inconsistent case)"
+      },
+      {
+       "name": "list_price",
+       "type": "string",
+       "comment": "List price (may be empty or negative)"
+      },
+      {
+       "name": "active",
+       "type": "string",
+       "comment": "Active flag (inconsistent)"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/bronze/products",
+     "partitions": []
+    }
+   ]
+  },
+  {
+   "name": "crm_gold",
+   "description": "Gold layer: business-ready joins and aggregates of silver data",
+   "owner": "impala",
+   "owner_type": "USER",
+   "params": {},
+   "location": "hdfs://hacluster/user/hive/warehouse/crm_gold.db",
+   "tables": [
+    {
+     "name": "customer_360",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "comment": "Gold: 360-degree customer view (joins and aggregates over silver)",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793293",
+      "spark.sql.create.version": "2.2 or prior",
+      "totalSize": "12137",
+      "spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"customer_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"customer_name\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"segment\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"industry\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"region\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"signup_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"total_opportunities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"won_opportunities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"lost_opportunities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"won_revenue\",\"type\":\"decimal(16,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"open_pipeline\",\"type\":\"decimal(16,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"total_activities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"last_activity_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"total_contacts\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"customer_status\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+      "numFiles": "1",
+      "spark.sql.sources.schema.numParts": "1"
+     },
+     "columns": [
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "industry",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "total_opportunities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "won_opportunities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "lost_opportunities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "won_revenue",
+       "type": "decimal(16,2)",
+       "comment": null
+      },
+      {
+       "name": "open_pipeline",
+       "type": "decimal(16,2)",
+       "comment": null
+      },
+      {
+       "name": "total_activities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "last_activity_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "total_contacts",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "customer_status",
+       "type": "string",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/gold/customer_360",
+     "partitions": []
+    },
+    {
+     "name": "monthly_revenue_summary",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "totalSize": "0",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "transient_lastDdlTime": "1792793277",
+      "EXTERNAL": "TRUE",
+      "comment": "Gold: closed-won revenue by month, segment and region",
+      "numFilesErasureCoded": "0"
+     },
+     "columns": [
+      {
+       "name": "close_year",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "close_month",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "deals_won",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "revenue",
+       "type": "decimal(20,2)",
+       "comment": null
+      },
+      {
+       "name": "avg_deal_size",
+       "type": "decimal(14,2)",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/gold/monthly_revenue_summary",
+     "partitions": []
+    },
+    {
+     "name": "pipeline_by_stage",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "totalSize": "0",
+      "comment": "Gold: open pipeline value and aging by stage, region and segment",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "transient_lastDdlTime": "1792793278",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "columns": [
+      {
+       "name": "stage",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "open_deals",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "pipeline_value",
+       "type": "decimal(20,2)",
+       "comment": null
+      },
+      {
+       "name": "avg_age_days",
+       "type": "decimal(14,2)",
+       "comment": null
+      },
+      {
+       "name": "deals_over_90d",
+       "type": "bigint",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/gold/pipeline_by_stage",
+     "partitions": []
+    }
+   ]
+  },
+  {
+   "name": "crm_silver",
+   "description": "Silver layer: cleaned, typed and deduplicated CRM data",
+   "owner": "impala",
+   "owner_type": "USER",
+   "params": {},
+   "location": "hdfs://hacluster/user/hive/warehouse/crm_silver.db",
+   "tables": [
+    {
+     "name": "dim_contacts",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "comment": "Silver: clean contact dimension (valid customer FKs only)",
+      "totalSize": "0",
+      "numFiles": "0",
+      "transient_lastDdlTime": "1792793263",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "columns": [
+      {
+       "name": "contact_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "first_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "last_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "role",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_primary",
+       "type": "boolean",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/silver/dim_contacts",
+     "partitions": []
+    },
+    {
+     "name": "dim_customers",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "comment": "Silver: clean customer dimension (deduped, standardized, typed)",
+      "totalSize": "0",
+      "transient_lastDdlTime": "1792793262",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "columns": [
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "industry",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "country",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "is_active",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "load_ts",
+       "type": "timestamp",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/silver/dim_customers",
+     "partitions": []
+    },
+    {
+     "name": "dim_products",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "totalSize": "0",
+      "transient_lastDdlTime": "1792793264",
+      "numFiles": "0",
+      "comment": "Silver: clean product dimension (sanitized prices and categories)",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "columns": [
+      {
+       "name": "product_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "product_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "category",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "list_price",
+       "type": "decimal(12,2)",
+       "comment": null
+      },
+      {
+       "name": "is_active",
+       "type": "boolean",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/silver/dim_products",
+     "partitions": []
+    },
+    {
+     "name": "fact_activities",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "totalSize": "0",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "transient_lastDdlTime": "1792793266",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "comment": "Silver: clean activity fact (canonical types, valid FKs, sane durations)"
+     },
+     "columns": [
+      {
+       "name": "activity_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "contact_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "opportunity_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "activity_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "activity_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "duration_minutes",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "outcome",
+       "type": "string",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/silver/fact_activities",
+     "partitions": []
+    },
+    {
+     "name": "fact_opportunities",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "params": {
+      "comment": "Silver: clean opportunity fact (canonical stages, valid FKs, typed amounts)",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793291",
+      "totalSize": "22004",
+      "numFiles": "1",
+      "spark.sql.create.version": "2.2 or prior",
+      "spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"opportunity_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"customer_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"product_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"contact_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"stage\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"amount\",\"type\":\"decimal(14,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"close_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"created_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"sales_cycle_days\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"owner_name\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"region\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+      "spark.sql.sources.schema.numParts": "1"
+     },
+     "columns": [
+      {
+       "name": "opportunity_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "product_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "contact_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "stage",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "amount",
+       "type": "decimal(14,2)",
+       "comment": null
+      },
+      {
+       "name": "close_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "created_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "sales_cycle_days",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "owner_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/data/crm/silver/fact_opportunities",
+     "partitions": []
+    }
+   ]
+  },
+  {
+   "name": "default",
+   "description": "Default Hive database",
+   "owner": "public",
+   "owner_type": "ROLE",
+   "params": {},
+   "location": "hdfs://hacluster/user/hive/warehouse",
+   "tables": [
+    {
+     "name": "tabla_hive_tradicional",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "transient_lastDdlTime": "1792696234",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "columns": [
+      {
+       "name": "id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "nombre",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "fecha",
+       "type": "date",
+       "comment": null
+      }
+     ],
+     "partition_keys": [],
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "location": "hdfs://hacluster/user/hive/warehouse/tabla_hive_tradicional",
+     "partitions": []
+    }
+   ]
+  }
+ ]
+}

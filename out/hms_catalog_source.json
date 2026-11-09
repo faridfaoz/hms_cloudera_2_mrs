@@ -1,0 +1,5589 @@
+{
+ "extracted_at": "2026-11-09T19:02:36.679911+00:00",
+ "source": {
+  "platform": "Cloudera CDH 7.1.7",
+  "hms_version": "3.1.3000.7.1.7.0-551",
+  "metastore_db": "jdbc:postgresql://127.0.0.1:5432/metastore",
+  "hdfs_authority": "cloudera-node.local:8020"
+ },
+ "databases": [
+  {
+   "name": "atlas_test",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/atlas_test.db",
+   "description": "",
+   "owner": "admin",
+   "owner_type": "USER",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "138",
+     "sd_id": "269",
+     "name": "facturas",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE",
+      "transient_lastDdlTime": "1792706500"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test.db/facturas",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "id_factura",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "monto",
+       "type": "decimal(10,2)",
+       "comment": null
+      },
+      {
+       "name": "fecha",
+       "type": "timestamp",
+       "comment": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "atlas_test_db",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/atlas_test_db.db",
+   "description": "",
+   "owner": "admin",
+   "owner_type": "USER",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "153",
+     "sd_id": "939",
+     "name": "atlas_test_metadata",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "transient_lastDdlTime": "1793052141",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/atlas_test_metadata",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "created_date",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "status",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "153",
+     "sd_id": "308",
+     "name": "live_test_users",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE",
+      "transient_lastDdlTime": "1792709992"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/live_test_users",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "username",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "153",
+     "sd_id": "292",
+     "name": "processed_active_users",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "transient_lastDdlTime": "1792708537",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/processed_active_users",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "user_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "user_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "153",
+     "sd_id": "291",
+     "name": "raw_users",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "impala.lastComputeStatsTime": "1792713811",
+      "numRows": "3",
+      "impala.events.catalogServiceId": "6fe03d5c5f594526:ab00623367d08ad6",
+      "impala.events.catalogVersion": "37",
+      "totalSize": "1049",
+      "STATS_GENERATED": "TASK",
+      "transactional_properties": "insert_only",
+      "transient_lastDdlTime": "1792708514",
+      "transactional": "true",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/atlas_test_db.db/raw_users",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "user_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "user_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "crm_bronze",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/crm_bronze.db",
+   "description": "Bronze layer: raw CRM data as ingested from source systems",
+   "owner": "impala",
+   "owner_type": "USER",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "364",
+     "sd_id": "647",
+     "name": "activities_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792793250",
+      "numFiles": "1",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "totalSize": "105803",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "comment": "Bronze: raw CRM sales activities (calls, emails, meetings, demos)"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/activities",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "columns": [
+      {
+       "name": "activity_id",
+       "type": "string",
+       "comment": "Activity id (raw)"
+      },
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Customer FK (may be orphan)"
+      },
+      {
+       "name": "contact_id",
+       "type": "string",
+       "comment": "Contact FK (may be empty)"
+      },
+      {
+       "name": "opportunity_id",
+       "type": "string",
+       "comment": "Opportunity FK (may be empty or orphan)"
+      },
+      {
+       "name": "activity_type",
+       "type": "string",
+       "comment": "Type: call/email/meeting/demo (variants)"
+      },
+      {
+       "name": "activity_date",
+       "type": "string",
+       "comment": "Activity date (unparsed string)"
+      },
+      {
+       "name": "duration_minutes",
+       "type": "string",
+       "comment": "Duration (may be empty or negative)"
+      },
+      {
+       "name": "outcome",
+       "type": "string",
+       "comment": "Free-text outcome"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ]
+    },
+    {
+     "db_id": "364",
+     "sd_id": "644",
+     "name": "contacts_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "totalSize": "30870",
+      "numFiles": "1",
+      "comment": "Bronze: raw CRM contacts as extracted from the source system",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793249"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/contacts",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "columns": [
+      {
+       "name": "contact_id",
+       "type": "string",
+       "comment": "Source contact id (raw)"
+      },
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Customer FK (may be orphan)"
+      },
+      {
+       "name": "first_name",
+       "type": "string",
+       "comment": "First name"
+      },
+      {
+       "name": "last_name",
+       "type": "string",
+       "comment": "Last name"
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": "Email (mixed case)"
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": "Phone (may be empty)"
+      },
+      {
+       "name": "role",
+       "type": "string",
+       "comment": "Role (mixed case)"
+      },
+      {
+       "name": "is_primary",
+       "type": "string",
+       "comment": "Primary contact flag (inconsistent)"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ]
+    },
+    {
+     "db_id": "364",
+     "sd_id": "643",
+     "name": "customers_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "numFiles": "1",
+      "comment": "Bronze: raw CRM customers as extracted from the source system",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "totalSize": "27071",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793249"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/customers",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "columns": [
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Source customer id (raw, may be empty)"
+      },
+      {
+       "name": "customer_name",
+       "type": "string",
+       "comment": "Company name (mixed case)"
+      },
+      {
+       "name": "industry",
+       "type": "string",
+       "comment": "Industry (raw)"
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": "Segment (inconsistent variants)"
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": "Region (inconsistent variants)"
+      },
+      {
+       "name": "country",
+       "type": "string",
+       "comment": "Country"
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": "Contact email (mixed case)"
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": "Phone (messy formats)"
+      },
+      {
+       "name": "signup_date",
+       "type": "string",
+       "comment": "Signup date (unparsed string)"
+      },
+      {
+       "name": "is_active",
+       "type": "string",
+       "comment": "Active flag (inconsistent variants)"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ]
+    },
+    {
+     "db_id": "364",
+     "sd_id": "646",
+     "name": "opportunities_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792793250",
+      "totalSize": "60422",
+      "numFiles": "1",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "comment": "Bronze: raw CRM opportunities (sales pipeline)"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/opportunities",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "columns": [
+      {
+       "name": "opportunity_id",
+       "type": "string",
+       "comment": "Opportunity id (raw)"
+      },
+      {
+       "name": "customer_id",
+       "type": "string",
+       "comment": "Customer FK (may be orphan)"
+      },
+      {
+       "name": "product_id",
+       "type": "string",
+       "comment": "Product FK"
+      },
+      {
+       "name": "contact_id",
+       "type": "string",
+       "comment": "Contact FK (may be empty)"
+      },
+      {
+       "name": "stage",
+       "type": "string",
+       "comment": "Sales stage (many inconsistent variants)"
+      },
+      {
+       "name": "amount",
+       "type": "string",
+       "comment": "Deal amount (may be empty or negative)"
+      },
+      {
+       "name": "created_date",
+       "type": "string",
+       "comment": "Created date (unparsed string)"
+      },
+      {
+       "name": "close_date",
+       "type": "string",
+       "comment": "Close date (may be invalid)"
+      },
+      {
+       "name": "owner_name",
+       "type": "string",
+       "comment": "Sales rep owning the deal"
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": "Region as captured by the rep"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ]
+    },
+    {
+     "db_id": "364",
+     "sd_id": "645",
+     "name": "products_raw",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "comment": "Bronze: raw CRM product catalog",
+      "numFiles": "1",
+      "totalSize": "1895",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793249"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/bronze/products",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+     "serde_params": {
+      "serialization.format": ",",
+      "field.delim": ","
+     },
+     "columns": [
+      {
+       "name": "product_id",
+       "type": "string",
+       "comment": "Product id (raw)"
+      },
+      {
+       "name": "product_name",
+       "type": "string",
+       "comment": "Product name"
+      },
+      {
+       "name": "category",
+       "type": "string",
+       "comment": "Category (inconsistent case)"
+      },
+      {
+       "name": "list_price",
+       "type": "string",
+       "comment": "List price (may be empty or negative)"
+      },
+      {
+       "name": "active",
+       "type": "string",
+       "comment": "Active flag (inconsistent)"
+      },
+      {
+       "name": "load_ts",
+       "type": "string",
+       "comment": "Source extraction timestamp"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "crm_gold",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/crm_gold.db",
+   "description": "Gold layer: business-ready joins and aggregates of silver data",
+   "owner": "impala",
+   "owner_type": "USER",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "366",
+     "sd_id": "653",
+     "name": "customer_360",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "comment": "Gold: 360-degree customer view (joins and aggregates over silver)",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793293",
+      "spark.sql.create.version": "2.2 or prior",
+      "totalSize": "12137",
+      "spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"customer_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"customer_name\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"segment\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"industry\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"region\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"signup_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"total_opportunities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"won_opportunities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"lost_opportunities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"won_revenue\",\"type\":\"decimal(16,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"open_pipeline\",\"type\":\"decimal(16,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"total_activities\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"last_activity_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"total_contacts\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"customer_status\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+      "numFiles": "1",
+      "spark.sql.sources.schema.numParts": "1"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/gold/customer_360",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "industry",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "total_opportunities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "won_opportunities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "lost_opportunities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "won_revenue",
+       "type": "decimal(16,2)",
+       "comment": null
+      },
+      {
+       "name": "open_pipeline",
+       "type": "decimal(16,2)",
+       "comment": null
+      },
+      {
+       "name": "total_activities",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "last_activity_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "total_contacts",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "customer_status",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "366",
+     "sd_id": "654",
+     "name": "monthly_revenue_summary",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "totalSize": "0",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "transient_lastDdlTime": "1792793277",
+      "EXTERNAL": "TRUE",
+      "comment": "Gold: closed-won revenue by month, segment and region",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/gold/monthly_revenue_summary",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "close_year",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "close_month",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "deals_won",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "revenue",
+       "type": "decimal(20,2)",
+       "comment": null
+      },
+      {
+       "name": "avg_deal_size",
+       "type": "decimal(14,2)",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "366",
+     "sd_id": "655",
+     "name": "pipeline_by_stage",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "totalSize": "0",
+      "comment": "Gold: open pipeline value and aging by stage, region and segment",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "transient_lastDdlTime": "1792793278",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/gold/pipeline_by_stage",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "stage",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "open_deals",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "pipeline_value",
+       "type": "decimal(20,2)",
+       "comment": null
+      },
+      {
+       "name": "avg_age_days",
+       "type": "decimal(14,2)",
+       "comment": null
+      },
+      {
+       "name": "deals_over_90d",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "crm_silver",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/crm_silver.db",
+   "description": "Silver layer: cleaned, typed and deduplicated CRM data",
+   "owner": "impala",
+   "owner_type": "USER",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "365",
+     "sd_id": "649",
+     "name": "dim_contacts",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "comment": "Silver: clean contact dimension (valid customer FKs only)",
+      "totalSize": "0",
+      "numFiles": "0",
+      "transient_lastDdlTime": "1792793263",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/silver/dim_contacts",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "contact_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "first_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "last_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "role",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_primary",
+       "type": "boolean",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "365",
+     "sd_id": "648",
+     "name": "dim_customers",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "comment": "Silver: clean customer dimension (deduped, standardized, typed)",
+      "totalSize": "0",
+      "transient_lastDdlTime": "1792793262",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/silver/dim_customers",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "industry",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "segment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "country",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "email",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "phone",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "signup_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "is_active",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "load_ts",
+       "type": "timestamp",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "365",
+     "sd_id": "650",
+     "name": "dim_products",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "totalSize": "0",
+      "transient_lastDdlTime": "1792793264",
+      "numFiles": "0",
+      "comment": "Silver: clean product dimension (sanitized prices and categories)",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/silver/dim_products",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "product_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "product_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "category",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "list_price",
+       "type": "decimal(12,2)",
+       "comment": null
+      },
+      {
+       "name": "is_active",
+       "type": "boolean",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "365",
+     "sd_id": "652",
+     "name": "fact_activities",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "totalSize": "0",
+      "numFiles": "0",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "transient_lastDdlTime": "1792793266",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "comment": "Silver: clean activity fact (canonical types, valid FKs, sane durations)"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/silver/fact_activities",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "activity_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "contact_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "opportunity_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "activity_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "activity_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "duration_minutes",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "outcome",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "365",
+     "sd_id": "651",
+     "name": "fact_opportunities",
+     "type": "EXTERNAL_TABLE",
+     "owner": "impala",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "comment": "Silver: clean opportunity fact (canonical stages, valid FKs, typed amounts)",
+      "OBJCAPABILITIES": "EXTREAD,EXTWRITE",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792793291",
+      "totalSize": "22004",
+      "numFiles": "1",
+      "spark.sql.create.version": "2.2 or prior",
+      "spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"opportunity_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"customer_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"product_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"contact_id\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"stage\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"amount\",\"type\":\"decimal(14,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"close_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"created_date\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"sales_cycle_days\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"owner_name\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"region\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}",
+      "spark.sql.sources.schema.numParts": "1"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/data/crm/silver/fact_opportunities",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "opportunity_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "customer_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "product_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "contact_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "stage",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "amount",
+       "type": "decimal(14,2)",
+       "comment": null
+      },
+      {
+       "name": "close_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "created_date",
+       "type": "timestamp",
+       "comment": null
+      },
+      {
+       "name": "sales_cycle_days",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "owner_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "region",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "default",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive",
+   "description": "Default Hive database",
+   "owner": "public",
+   "owner_type": "ROLE",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "1",
+     "sd_id": "162",
+     "name": "tabla_hive_tradicional",
+     "type": "MANAGED_TABLE",
+     "owner": "admin",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transactional_properties": "insert_only",
+      "transactional": "true",
+      "transient_lastDdlTime": "1792696234",
+      "OBJCAPABILITIES": "HIVEMANAGEDINSERTREAD,HIVEMANAGEDINSERTWRITE"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/managed/hive/tabla_hive_tradicional",
+     "input_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+     "serde_lib": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "nombre",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "fecha",
+       "type": "date",
+       "comment": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "information_schema",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/information_schema.db",
+   "description": "",
+   "owner": "hive",
+   "owner_type": "USER",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "3",
+     "sd_id": "56",
+     "name": "column_privileges",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT DISTINCT P.GRANTOR, P.PRINCIPAL_NAME, 'default', D.NAME, T.TBL_NAME, P.COLUMN_NAME, P.TBL_COL_PRIV, IF (P.GRANT_OPTION == 0, 'NO', 'YES') FROM sys.TBL_COL_PRIVS P JOIN sys.TBLS T ON (P.TBL_ID = T.TBL_ID) JOIN sys.DBS D ON (T.DB_ID = D.DB_ID) JOIN sys.SDS S ON (S.SD_ID = T.SD_ID) LEFT JOIN sys.TBL_PRIVS P2 ON (P.TBL_ID = P2.TBL_ID) WHERE NOT restrict_information_schema() OR P2.TBL_ID IS NOT NULL AND P.PRINCIPAL_NAME = P2.PRINCIPAL_NAME AND P.PRINCIPAL_TYPE = P2.PRINCIPAL_TYPE AND (P2.PRINCIPAL_NAME=current_user() AND P2.PRINCIPAL_TYPE='USER' OR ((array_contains(current_groups(), P2.PRINCIPAL_NAME) OR P2.PRINCIPAL_NAME = 'public') AND P2.PRINCIPAL_TYPE='GROUP')) AND P2.TBL_PRIV='SELECT' AND P.AUTHORIZER=current_authorizer() AND P2.AUTHORIZER=current_authorizer()",
+     "view_expanded_text": "SELECT `grantor` AS `grantor`, `principal_name` AS `grantee`, `_c2` AS `table_catalog`, `name` AS `table_schema`, `tbl_name` AS `table_name`, `column_name` AS `column_name`, `tbl_col_priv` AS `privilege_type`, `_c7` AS `is_grantable` FROM (SELECT DISTINCT `p`.`grantor`, `p`.`principal_name`, 'default', `d`.`name`, `t`.`tbl_name`, `p`.`column_name`, `p`.`tbl_col_priv`, IF (`p`.`grant_option` == 0, 'NO', 'YES') FROM `sys`.`TBL_COL_PRIVS` `P` JOIN `sys`.`TBLS` `T` ON (`p`.`tbl_id` = `t`.`tbl_id`) JOIN `sys`.`DBS` `D` ON (`t`.`db_id` = `d`.`db_id`) JOIN `sys`.`SDS` `S` ON (`s`.`sd_id` = `t`.`sd_id`) LEFT JOIN `sys`.`TBL_PRIVS` `P2` ON (`p`.`tbl_id` = `p2`.`tbl_id`) WHERE NOT restrict_information_schema() OR `p2`.`tbl_id` IS NOT NULL AND `p`.`principal_name` = `p2`.`principal_name` AND `p`.`principal_type` = `p2`.`principal_type` AND (`p2`.`principal_name`=current_user() AND `p2`.`principal_type`='USER' OR ((array_contains(current_groups(), `p2`.`principal_name`) OR `p2`.`principal_name` = 'public') AND `p2`.`principal_type`='GROUP')) AND `p2`.`tbl_priv`='SELECT' AND `p`.`authorizer`=current_authorizer() AND `p2`.`authorizer`=current_authorizer()) `COLUMN_PRIVILEGES`",
+     "params": {
+      "transient_lastDdlTime": "1792630126",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantee",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "privilege_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_grantable",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "55",
+     "name": "columns",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT DISTINCT 'default', D.NAME, T.TBL_NAME, C.COLUMN_NAME, C.INTEGER_IDX, cast (null as string), 'YES', C.TYPE_NAME as TYPE_NAME, CASE WHEN lower(C.TYPE_NAME) like 'varchar%' THEN cast(regexp_extract(upper(C.TYPE_NAME), '^VARCHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) WHEN lower(C.TYPE_NAME) like 'char%'    THEN cast(regexp_extract(upper(C.TYPE_NAME),    '^CHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) ELSE null END, CASE WHEN lower(C.TYPE_NAME) like 'varchar%' THEN cast(regexp_extract(upper(C.TYPE_NAME), '^VARCHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) WHEN lower(C.TYPE_NAME) like 'char%'    THEN cast(regexp_extract(upper(C.TYPE_NAME),    '^CHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) ELSE null END, CASE WHEN lower(C.TYPE_NAME) = 'bigint' THEN 19 WHEN lower(C.TYPE_NAME) = 'int' THEN 10 WHEN lower(C.TYPE_NAME) = 'smallint' THEN 5 WHEN lower(C.TYPE_NAME) = 'tinyint' THEN 3 WHEN lower(C.TYPE_NAME) = 'float' THEN 23 WHEN lower(C.TYPE_NAME) = 'double' THEN 53 WHEN lower(C.TYPE_NAME) like 'decimal%' THEN regexp_extract(upper(C.TYPE_NAME), '^DECIMAL\\\\s*\\\\((\\\\d+)',1) WHEN lower(C.TYPE_NAME) like 'numeric%' THEN regexp_extract(upper(C.TYPE_NAME), '^NUMERIC\\\\s*\\\\((\\\\d+)',1) ELSE null END, CASE WHEN lower(C.TYPE_NAME) = 'bigint' THEN 10 WHEN lower(C.TYPE_NAME) = 'int' THEN 10 WHEN lower(C.TYPE_NAME) = 'smallint' THEN 10 WHEN lower(C.TYPE_NAME) = 'tinyint' THEN 10 WHEN lower(C.TYPE_NAME) = 'float' THEN 2 WHEN lower(C.TYPE_NAME) = 'double' THEN 2 WHEN lower(C.TYPE_NAME) like 'decimal%' THEN 10 WHEN lower(C.TYPE_NAME) like 'numeric%' THEN 10 ELSE null END, CASE WHEN lower(C.TYPE_NAME) like 'decimal%' THEN regexp_extract(upper(C.TYPE_NAME), '^DECIMAL\\\\s*\\\\((\\\\d+),(\\\\d+)',2) WHEN lower(C.TYPE_NAME) like 'numeric%' THEN regexp_extract(upper(C.TYPE_NAME), '^NUMERIC\\\\s*\\\\((\\\\d+),(\\\\d+)',2) ELSE null END, CASE WHEN lower(C.TYPE_NAME) = 'date' THEN 0 WHEN lower(C.TYPE_NAME) = 'timestamp' THEN 9 ELSE null END, cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), C.CD_ID, 'NO', 'NO', cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), 'NEVER', cast (null as string), 'NO', 'NO', cast (null as string), 'YES', C.TYPE_NAME as DECLARED_DATA_TYPE, CASE WHEN lower(C.TYPE_NAME) = 'bigint' THEN 19 WHEN lower(C.TYPE_NAME) = 'int' THEN 10 WHEN lower(C.TYPE_NAME) = 'smallint' THEN 5 WHEN lower(C.TYPE_NAME) = 'tinyint' THEN 3 WHEN lower(C.TYPE_NAME) = 'float' THEN 23 WHEN lower(C.TYPE_NAME) = 'double' THEN 53 WHEN lower(C.TYPE_NAME) like 'decimal%' THEN regexp_extract(upper(C.TYPE_NAME), '^DECIMAL\\\\s*\\\\((\\\\d+)',1) WHEN lower(C.TYPE_NAME) like 'numeric%' THEN regexp_extract(upper(C.TYPE_NAME), '^NUMERIC\\\\s*\\\\((\\\\d+)',1) ELSE null END, CASE WHEN lower(C.TYPE_NAME) = 'bigint' THEN 10 WHEN lower(C.TYPE_NAME) = 'int' THEN 10 WHEN lower(C.TYPE_NAME) = 'smallint' THEN 10 WHEN lower(C.TYPE_NAME) = 'tinyint' THEN 10 WHEN lower(C.TYPE_NAME) = 'float' THEN 2 WHEN lower(C.TYPE_NAME) = 'double' THEN 2 WHEN lower(C.TYPE_NAME) like 'decimal%' THEN 10 WHEN lower(C.TYPE_NAME) like 'numeric%' THEN 10 ELSE null END FROM sys.COLUMNS_V2 C JOIN sys.SDS S ON (C.CD_ID = S.CD_ID) JOIN sys.TBLS T ON (S.SD_ID = T.SD_ID) JOIN sys.DBS D ON (T.DB_ID = D.DB_ID) LEFT JOIN sys.TBL_COL_PRIVS P ON (T.TBL_ID = P.TBL_ID) WHERE NOT restrict_information_schema() OR P.TBL_ID IS NOT NULL AND C.COLUMN_NAME = P.COLUMN_NAME AND (P.PRINCIPAL_NAME=current_user() AND P.PRINCIPAL_TYPE='USER' OR ((array_contains(current_groups(), P.PRINCIPAL_NAME) OR P.PRINCIPAL_NAME = 'public') AND P.PRINCIPAL_TYPE='GROUP')) AND P.TBL_COL_PRIV='SELECT' AND P.AUTHORIZER=current_authorizer()",
+     "view_expanded_text": "SELECT `_c0` AS `table_catalog`, `name` AS `table_schema`, `tbl_name` AS `table_name`, `column_name` AS `column_name`, `integer_idx` AS `ordinal_position`, `_c5` AS `column_default`, `_c6` AS `is_nullable`, `type_name` AS `data_type`, `_c8` AS `character_maximum_length`, `_c9` AS `character_octet_length`, `_c10` AS `numeric_precision`, `_c11` AS `numeric_precision_radix`, `_c12` AS `numeric_scale`, `_c13` AS `datetime_precision`, `_c14` AS `interval_type`, `_c15` AS `interval_precision`, `_c16` AS `character_set_catalog`, `_c17` AS `character_set_schema`, `_c18` AS `character_set_name`, `_c19` AS `collation_catalog`, `_c20` AS `collation_schema`, `_c21` AS `collation_name`, `_c22` AS `udt_catalog`, `_c23` AS `udt_schema`, `_c24` AS `udt_name`, `_c25` AS `scope_catalog`, `_c26` AS `scope_schema`, `_c27` AS `scope_name`, `_c28` AS `maximum_cardinality`, `cd_id` AS `dtd_identifier`, `_c30` AS `is_self_referencing`, `_c31` AS `is_identity`, `_c32` AS `identity_generation`, `_c33` AS `identity_start`, `_c34` AS `identity_increment`, `_c35` AS `identity_maximum`, `_c36` AS `identity_minimum`, `_c37` AS `identity_cycle`, `_c38` AS `is_generated`, `_c39` AS `generation_expression`, `_c40` AS `is_system_time_period_start`, `_c41` AS `is_system_time_period_end`, `_c42` AS `system_time_period_timestamp_generation`, `_c43` AS `is_updatable`, `declared_data_type` AS `declared_data_type`, `_c45` AS `declared_numeric_precision`, `_c46` AS `declared_numeric_scale` FROM (SELECT DISTINCT 'default', `d`.`name`, `t`.`tbl_name`, `c`.`column_name`, `c`.`integer_idx`, cast (null as string), 'YES', `c`.`type_name` as `TYPE_NAME`, CASE WHEN lower(`c`.`type_name`) like 'varchar%' THEN cast(regexp_extract(upper(`c`.`type_name`), '^VARCHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) WHEN lower(`c`.`type_name`) like 'char%'    THEN cast(regexp_extract(upper(`c`.`type_name`),    '^CHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) ELSE null END, CASE WHEN lower(`c`.`type_name`) like 'varchar%' THEN cast(regexp_extract(upper(`c`.`type_name`), '^VARCHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) WHEN lower(`c`.`type_name`) like 'char%'    THEN cast(regexp_extract(upper(`c`.`type_name`),    '^CHAR\\\\s*\\\\((\\\\d+)\\\\s*\\\\)$', 1) as int) ELSE null END, CASE WHEN lower(`c`.`type_name`) = 'bigint' THEN 19 WHEN lower(`c`.`type_name`) = 'int' THEN 10 WHEN lower(`c`.`type_name`) = 'smallint' THEN 5 WHEN lower(`c`.`type_name`) = 'tinyint' THEN 3 WHEN lower(`c`.`type_name`) = 'float' THEN 23 WHEN lower(`c`.`type_name`) = 'double' THEN 53 WHEN lower(`c`.`type_name`) like 'decimal%' THEN regexp_extract(upper(`c`.`type_name`), '^DECIMAL\\\\s*\\\\((\\\\d+)',1) WHEN lower(`c`.`type_name`) like 'numeric%' THEN regexp_extract(upper(`c`.`type_name`), '^NUMERIC\\\\s*\\\\((\\\\d+)',1) ELSE null END, CASE WHEN lower(`c`.`type_name`) = 'bigint' THEN 10 WHEN lower(`c`.`type_name`) = 'int' THEN 10 WHEN lower(`c`.`type_name`) = 'smallint' THEN 10 WHEN lower(`c`.`type_name`) = 'tinyint' THEN 10 WHEN lower(`c`.`type_name`) = 'float' THEN 2 WHEN lower(`c`.`type_name`) = 'double' THEN 2 WHEN lower(`c`.`type_name`) like 'decimal%' THEN 10 WHEN lower(`c`.`type_name`) like 'numeric%' THEN 10 ELSE null END, CASE WHEN lower(`c`.`type_name`) like 'decimal%' THEN regexp_extract(upper(`c`.`type_name`), '^DECIMAL\\\\s*\\\\((\\\\d+),(\\\\d+)',2) WHEN lower(`c`.`type_name`) like 'numeric%' THEN regexp_extract(upper(`c`.`type_name`), '^NUMERIC\\\\s*\\\\((\\\\d+),(\\\\d+)',2) ELSE null END, CASE WHEN lower(`c`.`type_name`) = 'date' THEN 0 WHEN lower(`c`.`type_name`) = 'timestamp' THEN 9 ELSE null END, cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), `c`.`cd_id`, 'NO', 'NO', cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), cast (null as string), 'NEVER', cast (null as string), 'NO', 'NO', cast (null as string), 'YES', `c`.`type_name` as `DECLARED_DATA_TYPE`, CASE WHEN lower(`c`.`type_name`) = 'bigint' THEN 19 WHEN lower(`c`.`type_name`) = 'int' THEN 10 WHEN lower(`c`.`type_name`) = 'smallint' THEN 5 WHEN lower(`c`.`type_name`) = 'tinyint' THEN 3 WHEN lower(`c`.`type_name`) = 'float' THEN 23 WHEN lower(`c`.`type_name`) = 'double' THEN 53 WHEN lower(`c`.`type_name`) like 'decimal%' THEN regexp_extract(upper(`c`.`type_name`), '^DECIMAL\\\\s*\\\\((\\\\d+)',1) WHEN lower(`c`.`type_name`) like 'numeric%' THEN regexp_extract(upper(`c`.`type_name`), '^NUMERIC\\\\s*\\\\((\\\\d+)',1) ELSE null END, CASE WHEN lower(`c`.`type_name`) = 'bigint' THEN 10 WHEN lower(`c`.`type_name`) = 'int' THEN 10 WHEN lower(`c`.`type_name`) = 'smallint' THEN 10 WHEN lower(`c`.`type_name`) = 'tinyint' THEN 10 WHEN lower(`c`.`type_name`) = 'float' THEN 2 WHEN lower(`c`.`type_name`) = 'double' THEN 2 WHEN lower(`c`.`type_name`) like 'decimal%' THEN 10 WHEN lower(`c`.`type_name`) like 'numeric%' THEN 10 ELSE null END FROM `sys`.`COLUMNS_V2` `C` JOIN `sys`.`SDS` `S` ON (`c`.`cd_id` = `s`.`cd_id`) JOIN `sys`.`TBLS` `T` ON (`s`.`sd_id` = `t`.`sd_id`) JOIN `sys`.`DBS` `D` ON (`t`.`db_id` = `d`.`db_id`) LEFT JOIN `sys`.`TBL_COL_PRIVS` `P` ON (`t`.`tbl_id` = `p`.`tbl_id`) WHERE NOT restrict_information_schema() OR `p`.`tbl_id` IS NOT NULL AND `c`.`column_name` = `p`.`column_name` AND (`p`.`principal_name`=current_user() AND `p`.`principal_type`='USER' OR ((array_contains(current_groups(), `p`.`principal_name`) OR `p`.`principal_name` = 'public') AND `p`.`principal_type`='GROUP')) AND `p`.`tbl_col_priv`='SELECT' AND `p`.`authorizer`=current_authorizer()) `COLUMNS`",
+     "params": {
+      "transient_lastDdlTime": "1792630125",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "table_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "ordinal_position",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "column_default",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_nullable",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "data_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "character_maximum_length",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "character_octet_length",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "numeric_precision",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "numeric_precision_radix",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "numeric_scale",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "datetime_precision",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "interval_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "interval_precision",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "character_set_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "character_set_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "character_set_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "collation_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "collation_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "collation_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "udt_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "udt_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "udt_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "scope_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "scope_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "scope_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "maximum_cardinality",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "dtd_identifier",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "is_self_referencing",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_identity",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "identity_generation",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "identity_start",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "identity_increment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "identity_maximum",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "identity_minimum",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "identity_cycle",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_generated",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "generation_expression",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_system_time_period_start",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_system_time_period_end",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "system_time_period_timestamp_generation",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_updatable",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "declared_data_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "declared_numeric_precision",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "declared_numeric_scale",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "58",
+     "name": "compactions",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT DISTINCT C_ID, C_CATALOG, C_DATABASE, C_TABLE, C_PARTITION, C_TYPE, C_STATE, C_HOSTNAME, C_WORKER_ID, C_ENQUEUE_TIME, C_START, C_DURATION, C_HADOOP_JOB_ID, C_RUN_AS, C_HIGHEST_WRITE_ID FROM sys.COMPACTIONS C JOIN sys.TBLS T ON (C.C_TABLE = T.TBL_NAME) JOIN sys.DBS D ON (C.C_DATABASE = D.NAME) LEFT JOIN sys.TBL_PRIVS P ON (T.TBL_ID = P.TBL_ID) WHERE (NOT restrict_information_schema() OR P.TBL_ID IS NOT NULL AND (P.PRINCIPAL_NAME=current_user() AND P.PRINCIPAL_TYPE='USER' OR ((array_contains(current_groups(), P.PRINCIPAL_NAME) OR P.PRINCIPAL_NAME = 'public') AND P.PRINCIPAL_TYPE='GROUP')) AND P.TBL_PRIV='SELECT' AND P.AUTHORIZER=current_authorizer())",
+     "view_expanded_text": "SELECT `c_id` AS `c_id`, `c_catalog` AS `c_catalog`, `c_database` AS `c_database`, `c_table` AS `c_table`, `c_partition` AS `c_partition`, `c_type` AS `c_type`, `c_state` AS `c_state`, `c_hostname` AS `c_hostname`, `c_worker_id` AS `c_worker_id`, `c_enqueue_time` AS `c_enqueue_time`, `c_start` AS `c_start`, `c_duration` AS `c_duration`, `c_hadoop_job_id` AS `c_hadoop_job_id`, `c_run_as` AS `c_run_as`, `c_highest_write_id` AS `c_highest_write_id` FROM (SELECT DISTINCT `c`.`c_id`, `c`.`c_catalog`, `c`.`c_database`, `c`.`c_table`, `c`.`c_partition`, `c`.`c_type`, `c`.`c_state`, `c`.`c_hostname`, `c`.`c_worker_id`, `c`.`c_enqueue_time`, `c`.`c_start`, `c`.`c_duration`, `c`.`c_hadoop_job_id`, `c`.`c_run_as`, `c`.`c_highest_write_id` FROM `sys`.`COMPACTIONS` `C` JOIN `sys`.`TBLS` `T` ON (`c`.`c_table` = `t`.`tbl_name`) JOIN `sys`.`DBS` `D` ON (`c`.`c_database` = `d`.`name`) LEFT JOIN `sys`.`TBL_PRIVS` `P` ON (`t`.`tbl_id` = `p`.`tbl_id`) WHERE (NOT restrict_information_schema() OR `p`.`tbl_id` IS NOT NULL AND (`p`.`principal_name`=current_user() AND `p`.`principal_type`='USER' OR ((array_contains(current_groups(), `p`.`principal_name`) OR `p`.`principal_name` = 'public') AND `p`.`principal_type`='GROUP')) AND `p`.`tbl_priv`='SELECT' AND `p`.`authorizer`=current_authorizer())) `COMPACTIONS`",
+     "params": {
+      "transient_lastDdlTime": "1792630128",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "c_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "c_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_database",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_table",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_partition",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_state",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_hostname",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_worker_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_enqueue_time",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "c_start",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "c_duration",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_hadoop_job_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_run_as",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_highest_write_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "60",
+     "name": "scheduled_executions",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT SCHEDULED_EXECUTION_ID, SCHEDULE_NAME, EXECUTOR_QUERY_ID, STATE, FROM_UNIXTIME(START_TIME) as START_TIME, FROM_UNIXTIME(END_TIME) as END_TIME, END_TIME-START_TIME as ELAPSED, ERROR_MESSAGE, FROM_UNIXTIME(LAST_UPDATE_TIME) AS LAST_UPDATE_TIME FROM SYS.SCHEDULED_EXECUTIONS SE JOIN SYS.SCHEDULED_QUERIES SQ WHERE SE.SCHEDULED_QUERY_ID=SQ.SCHEDULED_QUERY_ID",
+     "view_expanded_text": "SELECT `se`.`scheduled_execution_id`, `sq`.`schedule_name`, `se`.`executor_query_id`, `se`.`state`, FROM_UNIXTIME(`se`.`start_time`) as `START_TIME`, FROM_UNIXTIME(`se`.`end_time`) as `END_TIME`, `se`.`end_time`-`se`.`start_time` as `ELAPSED`, `se`.`error_message`, FROM_UNIXTIME(`se`.`last_update_time`) AS `LAST_UPDATE_TIME` FROM `SYS`.`SCHEDULED_EXECUTIONS` `SE` JOIN `SYS`.`SCHEDULED_QUERIES` `SQ` WHERE `se`.`scheduled_query_id`=`sq`.`scheduled_query_id`",
+     "params": {
+      "transient_lastDdlTime": "1792630128",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "scheduled_execution_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "schedule_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "executor_query_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "start_time",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "end_time",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "elapsed",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "error_message",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "last_update_time",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "59",
+     "name": "scheduled_queries",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "select SCHEDULED_QUERY_ID , SCHEDULE_NAME , ENABLED, CLUSTER_NAMESPACE, SCHEDULE, USER, QUERY, FROM_UNIXTIME(NEXT_EXECUTION) as NEXT_EXECUTION, ACTIVE_EXECUTION_ID FROM SYS.SCHEDULED_QUERIES",
+     "view_expanded_text": "select `scheduled_queries`.`scheduled_query_id` , `scheduled_queries`.`schedule_name` , `scheduled_queries`.`enabled`, `scheduled_queries`.`cluster_namespace`, `scheduled_queries`.`schedule`, `scheduled_queries`.`user`, `scheduled_queries`.`query`, FROM_UNIXTIME(`scheduled_queries`.`next_execution`) as `NEXT_EXECUTION`, `scheduled_queries`.`active_execution_id` FROM `SYS`.`SCHEDULED_QUERIES`",
+     "params": {
+      "transient_lastDdlTime": "1792630128",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "scheduled_query_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "schedule_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "enabled",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "cluster_namespace",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "schedule",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "user",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "query",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "next_execution",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "active_execution_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "52",
+     "name": "schemata",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT DISTINCT 'default', D.NAME, D.OWNER_NAME, cast(null as string), cast(null as string), cast(null as string), DB_LOCATION_URI FROM sys.DBS D LEFT JOIN sys.TBLS T ON (D.DB_ID = T.DB_ID) LEFT JOIN sys.TBL_PRIVS P ON (T.TBL_ID = P.TBL_ID) WHERE NOT restrict_information_schema() OR P.TBL_ID IS NOT NULL AND (P.PRINCIPAL_NAME=current_user() AND P.PRINCIPAL_TYPE='USER' OR ((array_contains(current_groups(), P.PRINCIPAL_NAME) OR P.PRINCIPAL_NAME = 'public') AND P.PRINCIPAL_TYPE='GROUP')) AND current_authorizer() = P.AUTHORIZER",
+     "view_expanded_text": "SELECT `_c0` AS `catalog_name`, `name` AS `schema_name`, `owner_name` AS `schema_owner`, `_c3` AS `default_character_set_catalog`, `_c4` AS `default_character_set_schema`, `_c5` AS `default_character_set_name`, `db_location_uri` AS `sql_path` FROM (SELECT DISTINCT 'default', `d`.`name`, `d`.`owner_name`, cast(null as string), cast(null as string), cast(null as string), `d`.`db_location_uri` FROM `sys`.`DBS` `D` LEFT JOIN `sys`.`TBLS` `T` ON (`d`.`db_id` = `t`.`db_id`) LEFT JOIN `sys`.`TBL_PRIVS` `P` ON (`t`.`tbl_id` = `p`.`tbl_id`) WHERE NOT restrict_information_schema() OR `p`.`tbl_id` IS NOT NULL AND (`p`.`principal_name`=current_user() AND `p`.`principal_type`='USER' OR ((array_contains(current_groups(), `p`.`principal_name`) OR `p`.`principal_name` = 'public') AND `p`.`principal_type`='GROUP')) AND current_authorizer() = `p`.`authorizer`) `SCHEMATA`",
+     "params": {
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630123"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "catalog_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "schema_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "schema_owner",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "default_character_set_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "default_character_set_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "default_character_set_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "sql_path",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "54",
+     "name": "table_privileges",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT DISTINCT P.GRANTOR, P.PRINCIPAL_NAME, 'default', D.NAME, T.TBL_NAME, P.TBL_PRIV, IF (P.GRANT_OPTION == 0, 'NO', 'YES'), 'NO' FROM sys.TBL_PRIVS P JOIN sys.TBLS T ON (P.TBL_ID = T.TBL_ID) JOIN sys.DBS D ON (T.DB_ID = D.DB_ID) LEFT JOIN sys.TBL_PRIVS P2 ON (P.TBL_ID = P2.TBL_ID) WHERE NOT restrict_information_schema() OR (P2.TBL_ID IS NOT NULL AND P.PRINCIPAL_NAME = P2.PRINCIPAL_NAME AND P.PRINCIPAL_TYPE = P2.PRINCIPAL_TYPE AND (P2.PRINCIPAL_NAME=current_user() AND P2.PRINCIPAL_TYPE='USER' OR ((array_contains(current_groups(), P2.PRINCIPAL_NAME) OR P2.PRINCIPAL_NAME = 'public') AND P2.PRINCIPAL_TYPE='GROUP')) AND P2.TBL_PRIV='SELECT' AND P.AUTHORIZER = current_authorizer() AND P2.AUTHORIZER = current_authorizer())",
+     "view_expanded_text": "SELECT `grantor` AS `grantor`, `principal_name` AS `grantee`, `_c2` AS `table_catalog`, `name` AS `table_schema`, `tbl_name` AS `table_name`, `tbl_priv` AS `privilege_type`, `_c6` AS `is_grantable`, `_c7` AS `with_hierarchy` FROM (SELECT DISTINCT `p`.`grantor`, `p`.`principal_name`, 'default', `d`.`name`, `t`.`tbl_name`, `p`.`tbl_priv`, IF (`p`.`grant_option` == 0, 'NO', 'YES'), 'NO' FROM `sys`.`TBL_PRIVS` `P` JOIN `sys`.`TBLS` `T` ON (`p`.`tbl_id` = `t`.`tbl_id`) JOIN `sys`.`DBS` `D` ON (`t`.`db_id` = `d`.`db_id`) LEFT JOIN `sys`.`TBL_PRIVS` `P2` ON (`p`.`tbl_id` = `p2`.`tbl_id`) WHERE NOT restrict_information_schema() OR (`p2`.`tbl_id` IS NOT NULL AND `p`.`principal_name` = `p2`.`principal_name` AND `p`.`principal_type` = `p2`.`principal_type` AND (`p2`.`principal_name`=current_user() AND `p2`.`principal_type`='USER' OR ((array_contains(current_groups(), `p2`.`principal_name`) OR `p2`.`principal_name` = 'public') AND `p2`.`principal_type`='GROUP')) AND `p2`.`tbl_priv`='SELECT' AND `p`.`authorizer` = current_authorizer() AND `p2`.`authorizer` = current_authorizer())) `TABLE_PRIVILEGES`",
+     "params": {
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630124"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantee",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "privilege_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_grantable",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "with_hierarchy",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "53",
+     "name": "tables",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT DISTINCT 'default', D.NAME, T.TBL_NAME, IF(length(T.VIEW_ORIGINAL_TEXT) > 0, 'VIEW', 'BASE_TABLE'), cast(null as string), cast(null as string), cast(null as string), cast(null as string), cast(null as string), IF(length(T.VIEW_ORIGINAL_TEXT) > 0, 'NO', 'YES'), 'NO', cast(null as string) FROM sys.TBLS T JOIN sys.DBS D ON (D.DB_ID = T.DB_ID) LEFT JOIN sys.TBL_PRIVS P ON (T.TBL_ID = P.TBL_ID) WHERE NOT restrict_information_schema() OR P.TBL_ID IS NOT NULL AND (P.PRINCIPAL_NAME=current_user() AND P.PRINCIPAL_TYPE='USER' OR ((array_contains(current_groups(), P.PRINCIPAL_NAME) OR P.PRINCIPAL_NAME = 'public') AND P.PRINCIPAL_TYPE='GROUP')) AND P.TBL_PRIV='SELECT' AND P.AUTHORIZER=current_authorizer()",
+     "view_expanded_text": "SELECT `_c0` AS `table_catalog`, `name` AS `table_schema`, `tbl_name` AS `table_name`, `_c3` AS `table_type`, `_c4` AS `self_referencing_column_name`, `_c5` AS `reference_generation`, `_c6` AS `user_defined_type_catalog`, `_c7` AS `user_defined_type_schema`, `_c8` AS `user_defined_type_name`, `_c9` AS `is_insertable_into`, `_c10` AS `is_typed`, `_c11` AS `commit_action` FROM (SELECT DISTINCT 'default', `d`.`name`, `t`.`tbl_name`, IF(length(`t`.`view_original_text`) > 0, 'VIEW', 'BASE_TABLE'), cast(null as string), cast(null as string), cast(null as string), cast(null as string), cast(null as string), IF(length(`t`.`view_original_text`) > 0, 'NO', 'YES'), 'NO', cast(null as string) FROM `sys`.`TBLS` `T` JOIN `sys`.`DBS` `D` ON (`d`.`db_id` = `t`.`db_id`) LEFT JOIN `sys`.`TBL_PRIVS` `P` ON (`t`.`tbl_id` = `p`.`tbl_id`) WHERE NOT restrict_information_schema() OR `p`.`tbl_id` IS NOT NULL AND (`p`.`principal_name`=current_user() AND `p`.`principal_type`='USER' OR ((array_contains(current_groups(), `p`.`principal_name`) OR `p`.`principal_name` = 'public') AND `p`.`principal_type`='GROUP')) AND `p`.`tbl_priv`='SELECT' AND `p`.`authorizer`=current_authorizer()) `TABLES`",
+     "params": {
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630123"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "table_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "self_referencing_column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "reference_generation",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "user_defined_type_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "user_defined_type_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "user_defined_type_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_insertable_into",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_typed",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "commit_action",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "3",
+     "sd_id": "57",
+     "name": "views",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT DISTINCT 'default', D.NAME, T.TBL_NAME, T.VIEW_ORIGINAL_TEXT, CAST(NULL as string), false, false, false, false, false FROM sys.DBS D JOIN sys.TBLS T ON (D.DB_ID = T.DB_ID) LEFT JOIN sys.TBL_PRIVS P ON (T.TBL_ID = P.TBL_ID) WHERE length(T.VIEW_ORIGINAL_TEXT) > 0 AND (NOT restrict_information_schema() OR P.TBL_ID IS NOT NULL AND (P.PRINCIPAL_NAME=current_user() AND P.PRINCIPAL_TYPE='USER' OR ((array_contains(current_groups(), P.PRINCIPAL_NAME) OR P.PRINCIPAL_NAME = 'public') AND P.PRINCIPAL_TYPE='GROUP')) AND P.TBL_PRIV='SELECT' AND P.AUTHORIZER=current_authorizer())",
+     "view_expanded_text": "SELECT `_c0` AS `table_catalog`, `name` AS `table_schema`, `tbl_name` AS `table_name`, `view_original_text` AS `view_definition`, `_c4` AS `check_option`, `_c5` AS `is_updatable`, `_c6` AS `is_insertable_into`, `_c7` AS `is_trigger_updatable`, `_c8` AS `is_trigger_deletable`, `_c9` AS `is_trigger_insertable_into` FROM (SELECT DISTINCT 'default', `d`.`name`, `t`.`tbl_name`, `t`.`view_original_text`, CAST(NULL as string), false, false, false, false, false FROM `sys`.`DBS` `D` JOIN `sys`.`TBLS` `T` ON (`d`.`db_id` = `t`.`db_id`) LEFT JOIN `sys`.`TBL_PRIVS` `P` ON (`t`.`tbl_id` = `p`.`tbl_id`) WHERE length(`t`.`view_original_text`) > 0 AND (NOT restrict_information_schema() OR `p`.`tbl_id` IS NOT NULL AND (`p`.`principal_name`=current_user() AND `p`.`principal_type`='USER' OR ((array_contains(current_groups(), `p`.`principal_name`) OR `p`.`principal_name` = 'public') AND `p`.`principal_type`='GROUP')) AND `p`.`tbl_priv`='SELECT' AND `p`.`authorizer`=current_authorizer())) `VIEWS`",
+     "params": {
+      "transient_lastDdlTime": "1792630127",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "table_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_schema",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "view_definition",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "check_option",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_updatable",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "is_insertable_into",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "is_trigger_updatable",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "is_trigger_deletable",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "is_trigger_insertable_into",
+       "type": "boolean",
+       "comment": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "sys",
+   "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db",
+   "description": "",
+   "owner": "hive",
+   "owner_type": "USER",
+   "params": {},
+   "tables": [
+    {
+     "db_id": "2",
+     "sd_id": "1",
+     "name": "bucketing_cols",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"SD_ID\", \"BUCKET_COL_NAME\", \"INTEGER_IDX\" FROM \"BUCKETING_COLS\"",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"bucket_col_name\":\"true\",\"integer_idx\":\"true\",\"sd_id\":\"true\"}}",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792630102"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/BUCKETING_COLS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "bucket_col_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "61",
+     "name": "cdh_version",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT 1 AS VER_ID, '3.1.3000.7.2.1.1-Update1' AS SCHEMA_VERSION, 'Hive release version 3.1.3000 for CDH 7.2.1.1-Update1' AS VERSION_COMMENT",
+     "view_expanded_text": "SELECT 1 AS `VER_ID`, '3.1.3000.7.2.1.1-Update1' AS `SCHEMA_VERSION`, 'Hive release version 3.1.3000 for CDH 7.2.1.1-Update1' AS `VERSION_COMMENT`",
+     "params": {
+      "transient_lastDdlTime": "1792630130",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "ver_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "schema_version",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "version_comment",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "2",
+     "name": "cds",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "hive.sql.query": "SELECT \"CD_ID\" FROM \"CDS\"",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"cd_id\":\"true\"}}",
+      "transient_lastDdlTime": "1792630102"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/CDS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "cd_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "3",
+     "name": "columns_v2",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630103",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"CD_ID\", \"COMMENT\", \"COLUMN_NAME\", \"TYPE_NAME\", \"INTEGER_IDX\" FROM \"COLUMNS_V2\"",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"cd_id\":\"true\",\"column_name\":\"true\",\"comment\":\"true\",\"integer_idx\":\"true\",\"type_name\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/COLUMNS_V2",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "cd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "comment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "type_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "46",
+     "name": "compaction_queue",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"COMPACTION_QUEUE\".\"CQ_ID\", \"COMPACTION_QUEUE\".\"CQ_DATABASE\", \"COMPACTION_QUEUE\".\"CQ_TABLE\", \"COMPACTION_QUEUE\".\"CQ_PARTITION\", \"COMPACTION_QUEUE\".\"CQ_STATE\", \"COMPACTION_QUEUE\".\"CQ_TYPE\", \"COMPACTION_QUEUE\".\"CQ_TBLPROPERTIES\", \"COMPACTION_QUEUE\".\"CQ_WORKER_ID\", \"COMPACTION_QUEUE\".\"CQ_ENQUEUE_TIME\", \"COMPACTION_QUEUE\".\"CQ_START\", \"COMPACTION_QUEUE\".\"CQ_RUN_AS\", \"COMPACTION_QUEUE\".\"CQ_HIGHEST_WRITE_ID\", \"COMPACTION_QUEUE\".\"CQ_HADOOP_JOB_ID\", \"COMPACTION_QUEUE\".\"CQ_ERROR_MESSAGE\" FROM \"COMPACTION_QUEUE\" ",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "transient_lastDdlTime": "1792630120",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"cq_database\":\"true\",\"cq_enqueue_time\":\"true\",\"cq_error_message\":\"true\",\"cq_hadoop_job_id\":\"true\",\"cq_highest_write_id\":\"true\",\"cq_id\":\"true\",\"cq_partition\":\"true\",\"cq_run_as\":\"true\",\"cq_start\":\"true\",\"cq_state\":\"true\",\"cq_table\":\"true\",\"cq_tblproperties\":\"true\",\"cq_type\":\"true\",\"cq_worker_id\":\"true\"}}",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/COMPACTION_QUEUE",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "cq_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cq_database",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_table",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_partition",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_state",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_tblproperties",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_worker_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_enqueue_time",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cq_start",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cq_run_as",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_highest_write_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cq_hadoop_job_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cq_error_message",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "48",
+     "name": "compactions",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT CC_ID, 'default', CC_DATABASE, CC_TABLE, CC_PARTITION, CASE WHEN CC_TYPE = 'i' THEN 'minor' WHEN CC_TYPE = 'a' THEN 'major' ELSE 'UNKNOWN' END, CASE WHEN CC_STATE = 'f' THEN 'failed' WHEN CC_STATE = 's' THEN 'succeeded' WHEN CC_STATE = 'a' THEN 'attempted' ELSE 'UNKNOWN' END, CASE WHEN CC_WORKER_ID IS NULL THEN cast (null as string) ELSE split(CC_WORKER_ID,\"-\")[0] END, CASE WHEN CC_WORKER_ID IS NULL THEN cast (null as string) ELSE split(CC_WORKER_ID,\"-\")[1] END, CC_ENQUEUE_TIME, CC_START, CASE WHEN CC_END IS NULL THEN cast (null as string) ELSE CC_END-CC_START END, CC_HADOOP_JOB_ID, CC_RUN_AS, CC_HIGHEST_WRITE_ID FROM COMPLETED_COMPACTIONS UNION ALL SELECT CQ_ID, 'default', CQ_DATABASE, CQ_TABLE, CQ_PARTITION, CASE WHEN CQ_TYPE = 'i' THEN 'minor' WHEN CQ_TYPE = 'a' THEN 'major' ELSE 'UNKNOWN' END, CASE WHEN CQ_STATE = 'i' THEN 'initiated' WHEN CQ_STATE = 'w' THEN 'working' WHEN CQ_STATE = 'r' THEN 'ready for cleaning' ELSE 'UNKNOWN' END, CASE WHEN CQ_WORKER_ID IS NULL THEN NULL ELSE split(CQ_WORKER_ID,\"-\")[0] END, CASE WHEN CQ_WORKER_ID IS NULL THEN NULL ELSE split(CQ_WORKER_ID,\"-\")[1] END, CQ_ENQUEUE_TIME, CQ_START, cast (null as string), CQ_HADOOP_JOB_ID, CQ_RUN_AS, CQ_HIGHEST_WRITE_ID FROM COMPACTION_QUEUE",
+     "view_expanded_text": "SELECT `cc_id` AS `c_id`, `_c1` AS `c_catalog`, `cc_database` AS `c_database`, `cc_table` AS `c_table`, `cc_partition` AS `c_partition`, `_c5` AS `c_type`, `_c6` AS `c_state`, `_c7` AS `c_hostname`, `_c8` AS `c_worker_id`, `cc_enqueue_time` AS `c_enqueue_time`, `cc_start` AS `c_start`, `_c11` AS `c_duration`, `cc_hadoop_job_id` AS `c_hadoop_job_id`, `cc_run_as` AS `c_run_as`, `cc_highest_write_id` AS `c_highest_write_id` FROM (SELECT `completed_compactions`.`cc_id`, 'default', `completed_compactions`.`cc_database`, `completed_compactions`.`cc_table`, `completed_compactions`.`cc_partition`, CASE WHEN `completed_compactions`.`cc_type` = 'i' THEN 'minor' WHEN `completed_compactions`.`cc_type` = 'a' THEN 'major' ELSE 'UNKNOWN' END, CASE WHEN `completed_compactions`.`cc_state` = 'f' THEN 'failed' WHEN `completed_compactions`.`cc_state` = 's' THEN 'succeeded' WHEN `completed_compactions`.`cc_state` = 'a' THEN 'attempted' ELSE 'UNKNOWN' END, CASE WHEN `completed_compactions`.`cc_worker_id` IS NULL THEN cast (null as string) ELSE split(`completed_compactions`.`cc_worker_id`,\"-\")[0] END, CASE WHEN `completed_compactions`.`cc_worker_id` IS NULL THEN cast (null as string) ELSE split(`completed_compactions`.`cc_worker_id`,\"-\")[1] END, `completed_compactions`.`cc_enqueue_time`, `completed_compactions`.`cc_start`, CASE WHEN `completed_compactions`.`cc_end` IS NULL THEN cast (null as string) ELSE `completed_compactions`.`cc_end`-`completed_compactions`.`cc_start` END, `completed_compactions`.`cc_hadoop_job_id`, `completed_compactions`.`cc_run_as`, `completed_compactions`.`cc_highest_write_id` FROM `SYS`.`COMPLETED_COMPACTIONS` UNION ALL SELECT `compaction_queue`.`cq_id`, 'default', `compaction_queue`.`cq_database`, `compaction_queue`.`cq_table`, `compaction_queue`.`cq_partition`, CASE WHEN `compaction_queue`.`cq_type` = 'i' THEN 'minor' WHEN `compaction_queue`.`cq_type` = 'a' THEN 'major' ELSE 'UNKNOWN' END, CASE WHEN `compaction_queue`.`cq_state` = 'i' THEN 'initiated' WHEN `compaction_queue`.`cq_state` = 'w' THEN 'working' WHEN `compaction_queue`.`cq_state` = 'r' THEN 'ready for cleaning' ELSE 'UNKNOWN' END, CASE WHEN `compaction_queue`.`cq_worker_id` IS NULL THEN NULL ELSE split(`compaction_queue`.`cq_worker_id`,\"-\")[0] END, CASE WHEN `compaction_queue`.`cq_worker_id` IS NULL THEN NULL ELSE split(`compaction_queue`.`cq_worker_id`,\"-\")[1] END, `compaction_queue`.`cq_enqueue_time`, `compaction_queue`.`cq_start`, cast (null as string), `compaction_queue`.`cq_hadoop_job_id`, `compaction_queue`.`cq_run_as`, `compaction_queue`.`cq_highest_write_id` FROM `SYS`.`COMPACTION_QUEUE`) `COMPACTIONS`",
+     "params": {
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630121"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "c_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "c_catalog",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_database",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_table",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_partition",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_state",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_hostname",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_worker_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_enqueue_time",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "c_start",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "c_duration",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_hadoop_job_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_run_as",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "c_highest_write_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "47",
+     "name": "completed_compactions",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"COMPLETED_COMPACTIONS\".\"CC_ID\", \"COMPLETED_COMPACTIONS\".\"CC_DATABASE\", \"COMPLETED_COMPACTIONS\".\"CC_TABLE\", \"COMPLETED_COMPACTIONS\".\"CC_PARTITION\", \"COMPLETED_COMPACTIONS\".\"CC_STATE\", \"COMPLETED_COMPACTIONS\".\"CC_TYPE\", \"COMPLETED_COMPACTIONS\".\"CC_TBLPROPERTIES\", \"COMPLETED_COMPACTIONS\".\"CC_WORKER_ID\", \"COMPLETED_COMPACTIONS\".\"CC_ENQUEUE_TIME\", \"COMPLETED_COMPACTIONS\".\"CC_START\", \"COMPLETED_COMPACTIONS\".\"CC_END\", \"COMPLETED_COMPACTIONS\".\"CC_RUN_AS\", \"COMPLETED_COMPACTIONS\".\"CC_HIGHEST_WRITE_ID\", \"COMPLETED_COMPACTIONS\".\"CC_HADOOP_JOB_ID\", \"COMPLETED_COMPACTIONS\".\"CC_ERROR_MESSAGE\" FROM \"COMPLETED_COMPACTIONS\" ",
+      "transient_lastDdlTime": "1792630120",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"cc_database\":\"true\",\"cc_end\":\"true\",\"cc_enqueue_time\":\"true\",\"cc_error_message\":\"true\",\"cc_hadoop_job_id\":\"true\",\"cc_highest_write_id\":\"true\",\"cc_id\":\"true\",\"cc_partition\":\"true\",\"cc_run_as\":\"true\",\"cc_start\":\"true\",\"cc_state\":\"true\",\"cc_table\":\"true\",\"cc_tblproperties\":\"true\",\"cc_type\":\"true\",\"cc_worker_id\":\"true\"}}"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/COMPLETED_COMPACTIONS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "cc_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cc_database",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_table",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_partition",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_state",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_tblproperties",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_worker_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_enqueue_time",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cc_start",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cc_end",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cc_run_as",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_highest_write_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cc_hadoop_job_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "cc_error_message",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "4",
+     "name": "database_params",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630103",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "hive.sql.query": "SELECT \"DB_ID\", \"PARAM_KEY\", \"PARAM_VALUE\" FROM \"DATABASE_PARAMS\"",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"db_id\":\"true\",\"param_key\":\"true\",\"param_value\":\"true\"}}"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DATABASE_PARAMS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "db_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "param_key",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "param_value",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "6",
+     "name": "db_privs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630104",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"DB_GRANT_ID\", \"CREATE_TIME\", \"DB_ID\", \"GRANT_OPTION\", \"GRANTOR\", \"GRANTOR_TYPE\", \"PRINCIPAL_NAME\", \"PRINCIPAL_TYPE\", \"DB_PRIV\", \"AUTHORIZER\" FROM \"DB_PRIVS\"",
+      "bucketing_version": "2",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"authorizer\":\"true\",\"create_time\":\"true\",\"db_grant_id\":\"true\",\"db_id\":\"true\",\"db_priv\":\"true\",\"grant_option\":\"true\",\"grantor\":\"true\",\"grantor_type\":\"true\",\"principal_name\":\"true\",\"principal_type\":\"true\"}}",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DB_PRIVS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "db_grant_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "db_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "grant_option",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "db_priv",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "authorizer",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "5",
+     "name": "dbs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"db_id\":\"true\",\"db_location_uri\":\"true\",\"name\":\"true\",\"owner_name\":\"true\",\"owner_type\":\"true\"}}",
+      "transient_lastDdlTime": "1792630103",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"DB_ID\", \"DB_LOCATION_URI\", \"NAME\", \"OWNER_NAME\", \"OWNER_TYPE\" FROM \"DBS\"",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DBS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "db_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "db_location_uri",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "owner_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "owner_type",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "36",
+     "name": "db_version",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630115",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "hive.sql.query": "SELECT \"VER_ID\", \"SCHEMA_VERSION\", \"VERSION_COMMENT\" FROM \"VERSION\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"schema_version\":\"true\",\"ver_id\":\"true\",\"version_comment\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/DB_VERSION",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "ver_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "schema_version",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "version_comment",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "37",
+     "name": "funcs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"FUNC_ID\", \"CLASS_NAME\", \"CREATE_TIME\", \"DB_ID\", \"FUNC_NAME\", \"FUNC_TYPE\", \"OWNER_NAME\", \"OWNER_TYPE\" FROM \"FUNCS\"",
+      "transient_lastDdlTime": "1792630116",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"class_name\":\"true\",\"create_time\":\"true\",\"db_id\":\"true\",\"func_id\":\"true\",\"func_name\":\"true\",\"func_type\":\"true\",\"owner_name\":\"true\",\"owner_type\":\"true\"}}",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/FUNCS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "func_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "class_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "db_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "func_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "func_type",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "owner_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "owner_type",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "7",
+     "name": "global_privs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630104",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"authorizer\":\"true\",\"create_time\":\"true\",\"grant_option\":\"true\",\"grantor\":\"true\",\"grantor_type\":\"true\",\"principal_name\":\"true\",\"principal_type\":\"true\",\"user_grant_id\":\"true\",\"user_priv\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "hive.sql.query": "SELECT \"USER_GRANT_ID\", \"CREATE_TIME\", \"GRANT_OPTION\", \"GRANTOR\", \"GRANTOR_TYPE\", \"PRINCIPAL_NAME\", \"PRINCIPAL_TYPE\", \"USER_PRIV\", \"AUTHORIZER\" FROM \"GLOBAL_PRIVS\""
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/GLOBAL_PRIVS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "user_grant_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grant_option",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "user_priv",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "authorizer",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "38",
+     "name": "key_constraints",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630116",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "hive.sql.query": "SELECT \"CHILD_CD_ID\", \"CHILD_INTEGER_IDX\", \"CHILD_TBL_ID\", \"PARENT_CD_ID\", \"PARENT_INTEGER_IDX\", \"PARENT_TBL_ID\", \"POSITION\", \"CONSTRAINT_NAME\", \"CONSTRAINT_TYPE\", \"UPDATE_RULE\", \"DELETE_RULE\", \"ENABLE_VALIDATE_RELY\", \"DEFAULT_VALUE\" FROM \"KEY_CONSTRAINTS\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"child_cd_id\":\"true\",\"child_integer_idx\":\"true\",\"child_tbl_id\":\"true\",\"constraint_name\":\"true\",\"constraint_type\":\"true\",\"default_value\":\"true\",\"delete_rule\":\"true\",\"enable_validate_rely\":\"true\",\"parent_cd_id\":\"true\",\"parent_integer_idx\":\"true\",\"parent_tbl_id\":\"true\",\"position\":\"true\",\"update_rule\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/KEY_CONSTRAINTS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "child_cd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "child_integer_idx",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "child_tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "parent_cd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "parent_integer_idx",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "parent_tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "position",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "constraint_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "constraint_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "update_rule",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "delete_rule",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "enable_validate_rely",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "default_value",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "29",
+     "name": "mv_creation_metadata",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"MV_CREATION_METADATA_ID\", \"DB_NAME\", \"TBL_NAME\", \"TXN_LIST\" FROM \"MV_CREATION_METADATA\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"db_name\":\"true\",\"mv_creation_metadata_id\":\"true\",\"tbl_name\":\"true\",\"txn_list\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792630112"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/MV_CREATION_METADATA",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "mv_creation_metadata_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "db_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "tbl_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "txn_list",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "30",
+     "name": "mv_tables_used",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"MV_CREATION_METADATA_ID\", \"TBL_ID\" FROM \"MV_TABLES_USED\"",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"mv_creation_metadata_id\":\"true\",\"tbl_id\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792630112"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/MV_TABLES_USED",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "mv_creation_metadata_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "12",
+     "name": "part_col_privs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "transient_lastDdlTime": "1792630106",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"authorizer\":\"true\",\"column_name\":\"true\",\"create_time\":\"true\",\"grant_option\":\"true\",\"grantor\":\"true\",\"grantor_type\":\"true\",\"part_col_priv\":\"true\",\"part_column_grant_id\":\"true\",\"part_id\":\"true\",\"principal_name\":\"true\",\"principal_type\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "hive.sql.query": "SELECT \"PART_COLUMN_GRANT_ID\", \"COLUMN_NAME\", \"CREATE_TIME\", \"GRANT_OPTION\", \"GRANTOR\", \"GRANTOR_TYPE\", \"PART_ID\", \"PRINCIPAL_NAME\", \"PRINCIPAL_TYPE\", \"PART_COL_PRIV\", \"AUTHORIZER\" FROM \"PART_COL_PRIVS\""
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PART_COL_PRIVS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "part_column_grant_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grant_option",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "part_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "principal_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "part_col_priv",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "authorizer",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "34",
+     "name": "part_col_stats",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630114",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"avg_col_len\":\"true\",\"big_decimal_high_value\":\"true\",\"big_decimal_low_value\":\"true\",\"column_name\":\"true\",\"column_type\":\"true\",\"cs_id\":\"true\",\"db_name\":\"true\",\"double_high_value\":\"true\",\"double_low_value\":\"true\",\"engine\":\"true\",\"last_analyzed\":\"true\",\"long_high_value\":\"true\",\"long_low_value\":\"true\",\"max_col_len\":\"true\",\"num_distincts\":\"true\",\"num_falses\":\"true\",\"num_nulls\":\"true\",\"num_trues\":\"true\",\"part_id\":\"true\",\"partition_name\":\"true\",\"table_name\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "hive.sql.query": "SELECT \"CS_ID\", \"DB_NAME\", \"TABLE_NAME\", \"PARTITION_NAME\", \"COLUMN_NAME\", \"COLUMN_TYPE\", \"PART_ID\", \"LONG_LOW_VALUE\", \"LONG_HIGH_VALUE\", \"DOUBLE_HIGH_VALUE\", \"DOUBLE_LOW_VALUE\", \"BIG_DECIMAL_LOW_VALUE\", \"BIG_DECIMAL_HIGH_VALUE\", \"NUM_NULLS\", \"NUM_DISTINCTS\", \"AVG_COL_LEN\", \"MAX_COL_LEN\", \"NUM_TRUES\", \"NUM_FALSES\", \"LAST_ANALYZED\", \"ENGINE\" FROM \"PART_COL_STATS\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PART_COL_STATS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "cs_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "db_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "partition_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "column_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "part_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "long_low_value",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "long_high_value",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "double_high_value",
+       "type": "double",
+       "comment": null
+      },
+      {
+       "name": "double_low_value",
+       "type": "double",
+       "comment": null
+      },
+      {
+       "name": "big_decimal_low_value",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "big_decimal_high_value",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "num_nulls",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "num_distincts",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "avg_col_len",
+       "type": "double",
+       "comment": null
+      },
+      {
+       "name": "max_col_len",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "num_trues",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "num_falses",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "last_analyzed",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "engine",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "9",
+     "name": "partition_keys",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630105",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "hive.sql.query": "SELECT \"TBL_ID\", \"PKEY_COMMENT\", \"PKEY_NAME\", \"PKEY_TYPE\", \"INTEGER_IDX\" FROM \"PARTITION_KEYS\"",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"integer_idx\":\"true\",\"pkey_comment\":\"true\",\"pkey_name\":\"true\",\"pkey_type\":\"true\",\"tbl_id\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITION_KEYS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "pkey_comment",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "pkey_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "pkey_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "10",
+     "name": "partition_key_vals",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630105",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"integer_idx\":\"true\",\"part_id\":\"true\",\"part_key_val\":\"true\"}}",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "hive.sql.query": "SELECT \"PART_ID\", \"PART_KEY_VAL\", \"INTEGER_IDX\" FROM \"PARTITION_KEY_VALS\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITION_KEY_VALS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "part_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "part_key_val",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "11",
+     "name": "partition_params",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"PART_ID\", \"PARAM_KEY\", \"PARAM_VALUE\" FROM \"PARTITION_PARAMS\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "transient_lastDdlTime": "1792630106",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"param_key\":\"true\",\"param_value\":\"true\",\"part_id\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITION_PARAMS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "part_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "param_key",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "param_value",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "8",
+     "name": "partitions",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "transient_lastDdlTime": "1792630105",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"create_time\":\"true\",\"last_access_time\":\"true\",\"part_id\":\"true\",\"part_name\":\"true\",\"sd_id\":\"true\",\"tbl_id\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "hive.sql.query": "SELECT \"PART_ID\", \"CREATE_TIME\", \"LAST_ACCESS_TIME\", \"PART_NAME\", \"SD_ID\", \"TBL_ID\" FROM \"PARTITIONS\"",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PARTITIONS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "part_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "last_access_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "part_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "40",
+     "name": "partition_stats_view",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT PART_ID, max(CASE PARAM_KEY WHEN 'COLUMN_STATS_ACCURATE' THEN PARAM_VALUE END) AS COLUMN_STATS_ACCURATE, max(CASE PARAM_KEY WHEN 'numFiles' THEN PARAM_VALUE END) AS NUM_FILES, max(CASE PARAM_KEY WHEN 'numRows' THEN PARAM_VALUE END) AS NUM_ROWS, max(CASE PARAM_KEY WHEN 'rawDataSize' THEN PARAM_VALUE END) AS RAW_DATA_SIZE, max(CASE PARAM_KEY WHEN 'totalSize' THEN PARAM_VALUE END) AS TOTAL_SIZE, max(CASE PARAM_KEY WHEN 'transient_lastDdlTime' THEN PARAM_VALUE END) AS TRANSIENT_LAST_DDL_TIME FROM PARTITION_PARAMS GROUP BY PART_ID",
+     "view_expanded_text": "SELECT `partition_params`.`part_id`, max(CASE `partition_params`.`param_key` WHEN 'COLUMN_STATS_ACCURATE' THEN `partition_params`.`param_value` END) AS `COLUMN_STATS_ACCURATE`, max(CASE `partition_params`.`param_key` WHEN 'numFiles' THEN `partition_params`.`param_value` END) AS `NUM_FILES`, max(CASE `partition_params`.`param_key` WHEN 'numRows' THEN `partition_params`.`param_value` END) AS `NUM_ROWS`, max(CASE `partition_params`.`param_key` WHEN 'rawDataSize' THEN `partition_params`.`param_value` END) AS `RAW_DATA_SIZE`, max(CASE `partition_params`.`param_key` WHEN 'totalSize' THEN `partition_params`.`param_value` END) AS `TOTAL_SIZE`, max(CASE `partition_params`.`param_key` WHEN 'transient_lastDdlTime' THEN `partition_params`.`param_value` END) AS `TRANSIENT_LAST_DDL_TIME` FROM `SYS`.`PARTITION_PARAMS` GROUP BY `partition_params`.`part_id`",
+     "params": {
+      "transient_lastDdlTime": "1792630117",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "part_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "column_stats_accurate",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "num_files",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "num_rows",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "raw_data_size",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "total_size",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "transient_last_ddl_time",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "13",
+     "name": "part_privs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"PART_GRANT_ID\", \"CREATE_TIME\", \"GRANT_OPTION\", \"GRANTOR\", \"GRANTOR_TYPE\", \"PART_ID\", \"PRINCIPAL_NAME\", \"PRINCIPAL_TYPE\", \"PART_PRIV\", \"AUTHORIZER\" FROM \"PART_PRIVS\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"authorizer\":\"true\",\"create_time\":\"true\",\"grant_option\":\"true\",\"grantor\":\"true\",\"grantor_type\":\"true\",\"part_grant_id\":\"true\",\"part_id\":\"true\",\"part_priv\":\"true\",\"principal_name\":\"true\",\"principal_type\":\"true\"}}",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630107",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/PART_PRIVS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "part_grant_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grant_option",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "part_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "principal_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "part_priv",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "authorizer",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "51",
+     "name": "replication_metrics",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"RM_SCHEDULED_EXECUTION_ID\", \"RM_POLICY\", \"RM_DUMP_EXECUTION_ID\", \"RM_METADATA\", \"RM_PROGRESS\" FROM \"REPLICATION_METRICS\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"dump_execution_id\":\"true\",\"metadata\":\"true\",\"policy_name\":\"true\",\"progress\":\"true\",\"scheduled_execution_id\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "transient_lastDdlTime": "1792630122",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/REPLICATION_METRICS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "scheduled_execution_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "policy_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "dump_execution_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "metadata",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "progress",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "15",
+     "name": "role_map",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630107",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"add_time\":\"true\",\"grant_option\":\"true\",\"grantor\":\"true\",\"grantor_type\":\"true\",\"principal_name\":\"true\",\"principal_type\":\"true\",\"role_grant_id\":\"true\",\"role_id\":\"true\"}}",
+      "hive.sql.query": "SELECT \"ROLE_GRANT_ID\", \"ADD_TIME\", \"GRANT_OPTION\", \"GRANTOR\", \"GRANTOR_TYPE\", \"PRINCIPAL_NAME\", \"PRINCIPAL_TYPE\", \"ROLE_ID\" FROM \"ROLE_MAP\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/ROLE_MAP",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "role_grant_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "add_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grant_option",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "role_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "14",
+     "name": "roles",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "hive.sql.query": "SELECT \"ROLE_ID\", \"CREATE_TIME\", \"OWNER_NAME\", \"ROLE_NAME\" FROM \"ROLES\"",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630107",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"create_time\":\"true\",\"owner_name\":\"true\",\"role_id\":\"true\",\"role_name\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/ROLES",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "role_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "owner_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "role_name",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "50",
+     "name": "scheduled_executions",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630121",
+      "hive.sql.query": "SELECT \"SCHEDULED_EXECUTION_ID\", \"SCHEDULED_QUERY_ID\", \"EXECUTOR_QUERY_ID\", \"STATE\", \"START_TIME\", \"END_TIME\", \"ERROR_MESSAGE\", \"LAST_UPDATE_TIME\" FROM \"SCHEDULED_EXECUTIONS\"",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"end_time\":\"true\",\"error_message\":\"true\",\"executor_query_id\":\"true\",\"last_update_time\":\"true\",\"scheduled_execution_id\":\"true\",\"scheduled_query_id\":\"true\",\"start_time\":\"true\",\"state\":\"true\"}}"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SCHEDULED_EXECUTIONS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "scheduled_execution_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "scheduled_query_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "executor_query_id",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "state",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "start_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "end_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "error_message",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "last_update_time",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "49",
+     "name": "scheduled_queries",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"active_execution_id\":\"true\",\"cluster_namespace\":\"true\",\"enabled\":\"true\",\"next_execution\":\"true\",\"query\":\"true\",\"schedule\":\"true\",\"schedule_name\":\"true\",\"scheduled_query_id\":\"true\",\"user\":\"true\"}}",
+      "transient_lastDdlTime": "1792630121",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "hive.sql.query": "SELECT \"SCHEDULED_QUERY_ID\", \"SCHEDULE_NAME\", \"ENABLED\", \"CLUSTER_NAMESPACE\", \"SCHEDULE\", \"USER\", \"QUERY\", \"NEXT_EXECUTION\", \"ACTIVE_EXECUTION_ID\" FROM \"SCHEDULED_QUERIES\""
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SCHEDULED_QUERIES",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "scheduled_query_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "schedule_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "enabled",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "cluster_namespace",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "schedule",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "user",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "query",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "next_execution",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "active_execution_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "17",
+     "name": "sd_params",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"param_key\":\"true\",\"param_value\":\"true\",\"sd_id\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630108",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "hive.sql.query": "SELECT \"SD_ID\", \"PARAM_KEY\", \"PARAM_VALUE\" FROM \"SD_PARAMS\"",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SD_PARAMS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "param_key",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "param_value",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "16",
+     "name": "sds",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"SD_ID\", \"CD_ID\", \"INPUT_FORMAT\", \"IS_COMPRESSED\", \"IS_STOREDASSUBDIRECTORIES\", \"LOCATION\", \"NUM_BUCKETS\", \"OUTPUT_FORMAT\", \"SERDE_ID\" FROM \"SDS\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630108",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"cd_id\":\"true\",\"input_format\":\"true\",\"is_compressed\":\"true\",\"is_storedassubdirectories\":\"true\",\"location\":\"true\",\"num_buckets\":\"true\",\"output_format\":\"true\",\"sd_id\":\"true\",\"serde_id\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SDS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "cd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "input_format",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_compressed",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "is_storedassubdirectories",
+       "type": "boolean",
+       "comment": null
+      },
+      {
+       "name": "location",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "num_buckets",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "output_format",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "serde_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "18",
+     "name": "sequence_table",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"SEQUENCE_NAME\", \"NEXT_VAL\" FROM \"SEQUENCE_TABLE\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630108",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"next_val\":\"true\",\"sequence_name\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SEQUENCE_TABLE",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sequence_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "next_val",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "20",
+     "name": "serde_params",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "hive.sql.query": "SELECT \"SERDE_ID\", \"PARAM_KEY\", \"PARAM_VALUE\" FROM \"SERDE_PARAMS\"",
+      "transient_lastDdlTime": "1792630109",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"param_key\":\"true\",\"param_value\":\"true\",\"serde_id\":\"true\"}}",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SERDE_PARAMS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "serde_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "param_key",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "param_value",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "19",
+     "name": "serdes",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"SERDE_ID\", \"NAME\", \"SLIB\" FROM \"SERDES\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630109",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"name\":\"true\",\"serde_id\":\"true\",\"slib\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SERDES",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "serde_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "slib",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "21",
+     "name": "skewed_col_names",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630109",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "hive.sql.query": "SELECT \"SD_ID\", \"SKEWED_COL_NAME\", \"INTEGER_IDX\" FROM \"SKEWED_COL_NAMES\"",
+      "EXTERNAL": "TRUE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"integer_idx\":\"true\",\"sd_id\":\"true\",\"skewed_col_name\":\"true\"}}",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_COL_NAMES",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "skewed_col_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "22",
+     "name": "skewed_col_value_loc_map",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "hive.sql.query": "SELECT \"SD_ID\", \"STRING_LIST_ID_KID\", \"LOCATION\" FROM \"SKEWED_COL_VALUE_LOC_MAP\"",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630110",
+      "EXTERNAL": "TRUE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"location\":\"true\",\"sd_id\":\"true\",\"string_list_id_kid\":\"true\"}}",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_COL_VALUE_LOC_MAP",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "string_list_id_kid",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "location",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "23",
+     "name": "skewed_string_list",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"string_list_id\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630110",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "hive.sql.query": "SELECT \"STRING_LIST_ID\" FROM \"SKEWED_STRING_LIST\""
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_STRING_LIST",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "string_list_id",
+       "type": "bigint",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "24",
+     "name": "skewed_string_list_values",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"STRING_LIST_ID\", \"STRING_LIST_VALUE\", \"INTEGER_IDX\" FROM \"SKEWED_STRING_LIST_VALUES\"",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"integer_idx\":\"true\",\"string_list_id\":\"true\",\"string_list_value\":\"true\"}}",
+      "bucketing_version": "2",
+      "transient_lastDdlTime": "1792630110",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_STRING_LIST_VALUES",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "string_list_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "string_list_value",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "25",
+     "name": "skewed_values",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "hive.sql.query": "SELECT \"SD_ID_OID\", \"STRING_LIST_ID_EID\", \"INTEGER_IDX\" FROM \"SKEWED_VALUES\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "transient_lastDdlTime": "1792630111",
+      "numFilesErasureCoded": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"integer_idx\":\"true\",\"sd_id_oid\":\"true\",\"string_list_id_eid\":\"true\"}}"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SKEWED_VALUES",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sd_id_oid",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "string_list_id_eid",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "26",
+     "name": "sort_cols",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"column_name\":\"true\",\"integer_idx\":\"true\",\"order\":\"true\",\"sd_id\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "hive.sql.query": "SELECT \"SD_ID\", \"COLUMN_NAME\", \"ORDER\", \"INTEGER_IDX\" FROM \"SORT_COLS\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "transient_lastDdlTime": "1792630111",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/SORT_COLS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "order",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "integer_idx",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "33",
+     "name": "tab_col_stats",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "totalSize": "0",
+      "numRows": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"avg_col_len\":\"true\",\"big_decimal_high_value\":\"true\",\"big_decimal_low_value\":\"true\",\"column_name\":\"true\",\"column_type\":\"true\",\"cs_id\":\"true\",\"db_name\":\"true\",\"double_high_value\":\"true\",\"double_low_value\":\"true\",\"engine\":\"true\",\"last_analyzed\":\"true\",\"long_high_value\":\"true\",\"long_low_value\":\"true\",\"max_col_len\":\"true\",\"num_distincts\":\"true\",\"num_falses\":\"true\",\"num_nulls\":\"true\",\"num_trues\":\"true\",\"table_name\":\"true\",\"tbl_id\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"CS_ID\", \"DB_NAME\", \"TABLE_NAME\", \"COLUMN_NAME\", \"COLUMN_TYPE\", \"TBL_ID\", \"LONG_LOW_VALUE\", \"LONG_HIGH_VALUE\", \"DOUBLE_HIGH_VALUE\", \"DOUBLE_LOW_VALUE\", \"BIG_DECIMAL_LOW_VALUE\", \"BIG_DECIMAL_HIGH_VALUE\", \"NUM_NULLS\", \"NUM_DISTINCTS\", \"AVG_COL_LEN\", \"MAX_COL_LEN\", \"NUM_TRUES\", \"NUM_FALSES\", \"LAST_ANALYZED\", \"ENGINE\" FROM \"TAB_COL_STATS\"",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792630113"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TAB_COL_STATS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "cs_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "db_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "table_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "column_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "long_low_value",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "long_high_value",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "double_high_value",
+       "type": "double",
+       "comment": null
+      },
+      {
+       "name": "double_low_value",
+       "type": "double",
+       "comment": null
+      },
+      {
+       "name": "big_decimal_low_value",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "big_decimal_high_value",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "num_nulls",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "num_distincts",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "avg_col_len",
+       "type": "double",
+       "comment": null
+      },
+      {
+       "name": "max_col_len",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "num_trues",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "num_falses",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "last_analyzed",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "engine",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "27",
+     "name": "table_params",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "hive.sql.query": "SELECT \"TBL_ID\", \"PARAM_KEY\", \"PARAM_VALUE\" FROM \"TABLE_PARAMS\"",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"param_key\":\"true\",\"param_value\":\"true\",\"tbl_id\":\"true\"}}",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "transient_lastDdlTime": "1792630111",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TABLE_PARAMS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "param_key",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "param_value",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "39",
+     "name": "table_stats_view",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT TBL_ID, max(CASE PARAM_KEY WHEN 'COLUMN_STATS_ACCURATE' THEN PARAM_VALUE END) AS COLUMN_STATS_ACCURATE, max(CASE PARAM_KEY WHEN 'numFiles' THEN PARAM_VALUE END) AS NUM_FILES, max(CASE PARAM_KEY WHEN 'numRows' THEN PARAM_VALUE END) AS NUM_ROWS, max(CASE PARAM_KEY WHEN 'rawDataSize' THEN PARAM_VALUE END) AS RAW_DATA_SIZE, max(CASE PARAM_KEY WHEN 'totalSize' THEN PARAM_VALUE END) AS TOTAL_SIZE, max(CASE PARAM_KEY WHEN 'transient_lastDdlTime' THEN PARAM_VALUE END) AS TRANSIENT_LAST_DDL_TIME FROM TABLE_PARAMS GROUP BY TBL_ID",
+     "view_expanded_text": "SELECT `table_params`.`tbl_id`, max(CASE `table_params`.`param_key` WHEN 'COLUMN_STATS_ACCURATE' THEN `table_params`.`param_value` END) AS `COLUMN_STATS_ACCURATE`, max(CASE `table_params`.`param_key` WHEN 'numFiles' THEN `table_params`.`param_value` END) AS `NUM_FILES`, max(CASE `table_params`.`param_key` WHEN 'numRows' THEN `table_params`.`param_value` END) AS `NUM_ROWS`, max(CASE `table_params`.`param_key` WHEN 'rawDataSize' THEN `table_params`.`param_value` END) AS `RAW_DATA_SIZE`, max(CASE `table_params`.`param_key` WHEN 'totalSize' THEN `table_params`.`param_value` END) AS `TOTAL_SIZE`, max(CASE `table_params`.`param_key` WHEN 'transient_lastDdlTime' THEN `table_params`.`param_value` END) AS `TRANSIENT_LAST_DDL_TIME` FROM `SYS`.`TABLE_PARAMS` GROUP BY `table_params`.`tbl_id`",
+     "params": {
+      "transient_lastDdlTime": "1792630117",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "column_stats_accurate",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "num_files",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "num_rows",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "raw_data_size",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "total_size",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "transient_last_ddl_time",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "31",
+     "name": "tbl_col_privs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"authorizer\":\"true\",\"column_name\":\"true\",\"create_time\":\"true\",\"grant_option\":\"true\",\"grantor\":\"true\",\"grantor_type\":\"true\",\"principal_name\":\"true\",\"principal_type\":\"true\",\"tbl_col_priv\":\"true\",\"tbl_column_grant_id\":\"true\",\"tbl_id\":\"true\"}}",
+      "hive.sql.query": "SELECT \"TBL_COLUMN_GRANT_ID\", \"COLUMN_NAME\", \"CREATE_TIME\", \"GRANT_OPTION\", \"GRANTOR\", \"GRANTOR_TYPE\", \"PRINCIPAL_NAME\", \"PRINCIPAL_TYPE\", \"TBL_COL_PRIV\", \"TBL_ID\", \"AUTHORIZER\" FROM \"TBL_COL_PRIVS\"",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792630113"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TBL_COL_PRIVS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "tbl_column_grant_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "column_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grant_option",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "tbl_col_priv",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "authorizer",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "32",
+     "name": "tbl_privs",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"TBL_GRANT_ID\", \"CREATE_TIME\", \"GRANT_OPTION\", \"GRANTOR\", \"GRANTOR_TYPE\", \"PRINCIPAL_NAME\", \"PRINCIPAL_TYPE\", \"TBL_PRIV\", \"TBL_ID\", \"AUTHORIZER\" FROM \"TBL_PRIVS\"",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"authorizer\":\"true\",\"create_time\":\"true\",\"grant_option\":\"true\",\"grantor\":\"true\",\"grantor_type\":\"true\",\"principal_name\":\"true\",\"principal_type\":\"true\",\"tbl_grant_id\":\"true\",\"tbl_id\":\"true\",\"tbl_priv\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792630113"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TBL_PRIVS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "tbl_grant_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grant_option",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "grantor",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "grantor_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "principal_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "tbl_priv",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "authorizer",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "28",
+     "name": "tbls",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"create_time\":\"true\",\"db_id\":\"true\",\"is_rewrite_enabled\":\"true\",\"last_access_time\":\"true\",\"owner\":\"true\",\"retention\":\"true\",\"sd_id\":\"true\",\"tbl_id\":\"true\",\"tbl_name\":\"true\",\"tbl_type\":\"true\",\"view_expanded_text\":\"true\",\"view_original_text\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"TBL_ID\", \"CREATE_TIME\", \"DB_ID\", \"LAST_ACCESS_TIME\", \"OWNER\", \"RETENTION\", \"SD_ID\", \"TBL_NAME\", \"TBL_TYPE\", \"VIEW_EXPANDED_TEXT\", \"VIEW_ORIGINAL_TEXT\", \"IS_REWRITE_ENABLED\" FROM \"TBLS\"",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "transient_lastDdlTime": "1792630112"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/TBLS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "tbl_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "create_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "db_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "last_access_time",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "owner",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "retention",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "sd_id",
+       "type": "bigint",
+       "comment": null
+      },
+      {
+       "name": "tbl_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "tbl_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "view_expanded_text",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "view_original_text",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "is_rewrite_enabled",
+       "type": "boolean",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "35",
+     "name": "version",
+     "type": "VIRTUAL_VIEW",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": "SELECT 1 AS VER_ID, '3.1.3000' AS SCHEMA_VERSION, 'Hive release version 3.1.3000' AS VERSION_COMMENT",
+     "view_expanded_text": "SELECT 1 AS `VER_ID`, '3.1.3000' AS `SCHEMA_VERSION`, 'Hive release version 3.1.3000' AS `VERSION_COMMENT`",
+     "params": {
+      "transient_lastDdlTime": "1792630115",
+      "bucketing_version": "2"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "",
+     "input_format": "org.apache.hadoop.mapred.TextInputFormat",
+     "output_format": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+     "serde_lib": "",
+     "serde_params": {},
+     "columns": [
+      {
+       "name": "ver_id",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "schema_version",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "version_comment",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "45",
+     "name": "wm_mappings",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"entity_name\":\"true\",\"entity_type\":\"true\",\"ordering\":\"true\",\"pool_path\":\"true\",\"rp_name\":\"true\"}}",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "hive.sql.query": "SELECT \"WM_RESOURCEPLAN\".\"NAME\", \"ENTITY_TYPE\", \"ENTITY_NAME\", case when \"WM_POOL\".\"PATH\" is null then '<unmanaged>' else \"WM_POOL\".\"PATH\" end, \"ORDERING\" FROM \"WM_MAPPING\" JOIN \"WM_RESOURCEPLAN\" ON \"WM_MAPPING\".\"RP_ID\" = \"WM_RESOURCEPLAN\".\"RP_ID\" LEFT OUTER JOIN \"WM_POOL\" ON \"WM_POOL\".\"POOL_ID\" = \"WM_MAPPING\".\"POOL_ID\" ",
+      "transient_lastDdlTime": "1792630120",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_MAPPINGS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "rp_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "entity_type",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "entity_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "pool_path",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "ordering",
+       "type": "int",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "43",
+     "name": "wm_pools",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"alloc_fraction\":\"true\",\"path\":\"true\",\"query_parallelism\":\"true\",\"rp_name\":\"true\",\"scheduling_policy\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630119",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "hive.sql.query": "SELECT \"WM_RESOURCEPLAN\".\"NAME\", \"WM_POOL\".\"PATH\", \"WM_POOL\".\"ALLOC_FRACTION\", \"WM_POOL\".\"QUERY_PARALLELISM\", \"WM_POOL\".\"SCHEDULING_POLICY\" FROM \"WM_POOL\" JOIN \"WM_RESOURCEPLAN\" ON \"WM_POOL\".\"RP_ID\" = \"WM_RESOURCEPLAN\".\"RP_ID\"",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_POOLS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "rp_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "path",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "alloc_fraction",
+       "type": "double",
+       "comment": null
+      },
+      {
+       "name": "query_parallelism",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "scheduling_policy",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "44",
+     "name": "wm_pools_to_triggers",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "hive.sql.query": "SELECT \"WM_RESOURCEPLAN\".\"NAME\" AS RP_NAME, \"WM_POOL\".\"PATH\" AS POOL_PATH, \"WM_TRIGGER\".\"NAME\" AS TRIGGER_NAME FROM \"WM_POOL_TO_TRIGGER\" JOIN \"WM_POOL\" ON \"WM_POOL_TO_TRIGGER\".\"POOL_ID\" = \"WM_POOL\".\"POOL_ID\" JOIN \"WM_TRIGGER\" ON \"WM_POOL_TO_TRIGGER\".\"TRIGGER_ID\" = \"WM_TRIGGER\".\"TRIGGER_ID\" JOIN \"WM_RESOURCEPLAN\" ON \"WM_POOL\".\"RP_ID\" = \"WM_RESOURCEPLAN\".\"RP_ID\" UNION SELECT \"WM_RESOURCEPLAN\".\"NAME\" AS RP_NAME, '<unmanaged queries>' AS POOL_PATH, \"WM_TRIGGER\".\"NAME\" AS TRIGGER_NAME FROM \"WM_TRIGGER\" JOIN \"WM_RESOURCEPLAN\" ON \"WM_TRIGGER\".\"RP_ID\" = \"WM_RESOURCEPLAN\".\"RP_ID\" WHERE CAST(\"WM_TRIGGER\".\"IS_IN_UNMANAGED\" AS CHAR) IN ('1', 't') ",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"pool_path\":\"true\",\"rp_name\":\"true\",\"trigger_name\":\"true\"}}",
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630119",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_POOLS_TO_TRIGGERS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "rp_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "pool_path",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "trigger_name",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "41",
+     "name": "wm_resourceplans",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "transient_lastDdlTime": "1792630117",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "hive.sql.query": "SELECT \"WM_RESOURCEPLAN\".\"NAME\", \"STATUS\", \"WM_RESOURCEPLAN\".\"QUERY_PARALLELISM\", \"WM_POOL\".\"PATH\" FROM \"WM_RESOURCEPLAN\" LEFT OUTER JOIN \"WM_POOL\" ON \"WM_RESOURCEPLAN\".\"DEFAULT_POOL_ID\" = \"WM_POOL\".\"POOL_ID\"",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"default_pool_path\":\"true\",\"name\":\"true\",\"query_parallelism\":\"true\",\"status\":\"true\"}}"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_RESOURCEPLANS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "status",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "query_parallelism",
+       "type": "int",
+       "comment": null
+      },
+      {
+       "name": "default_pool_path",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    },
+    {
+     "db_id": "2",
+     "sd_id": "42",
+     "name": "wm_triggers",
+     "type": "EXTERNAL_TABLE",
+     "owner": "hive",
+     "owner_type": "USER",
+     "view_original_text": null,
+     "view_expanded_text": null,
+     "params": {
+      "storage_handler": "org.apache.hive.storage.jdbc.JdbcStorageHandler",
+      "totalSize": "0",
+      "numRows": "0",
+      "rawDataSize": "0",
+      "transient_lastDdlTime": "1792630118",
+      "numFiles": "0",
+      "hive.sql.database.type": "METASTORE",
+      "bucketing_version": "2",
+      "hive.sql.query": "SELECT r.\"NAME\" AS RP_NAME, t.\"NAME\" AS NAME, \"TRIGGER_EXPRESSION\", \"ACTION_EXPRESSION\" FROM \"WM_TRIGGER\" t JOIN \"WM_RESOURCEPLAN\" r ON t.\"RP_ID\" = r.\"RP_ID\"",
+      "EXTERNAL": "TRUE",
+      "numFilesErasureCoded": "0",
+      "COLUMN_STATS_ACCURATE": "{\"BASIC_STATS\":\"true\",\"COLUMN_STATS\":{\"action_expression\":\"true\",\"name\":\"true\",\"rp_name\":\"true\",\"trigger_expression\":\"true\"}}"
+     },
+     "partition_keys": [],
+     "partitions": [],
+     "location": "hdfs://cloudera-node.local:8020/warehouse/tablespace/external/hive/sys.db/WM_TRIGGERS",
+     "input_format": "",
+     "output_format": "",
+     "serde_lib": "org.apache.hive.storage.jdbc.JdbcSerDe",
+     "serde_params": {
+      "serialization.format": "1"
+     },
+     "columns": [
+      {
+       "name": "rp_name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "name",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "trigger_expression",
+       "type": "string",
+       "comment": null
+      },
+      {
+       "name": "action_expression",
+       "type": "string",
+       "comment": null
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
